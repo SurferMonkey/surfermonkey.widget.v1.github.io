@@ -29,9 +29,14 @@ const payloadParmsArr = []; // Target function parameters. Array of strings
 const amount = 1; // Value amount (ERC20 or Native) to be locked in the system. UINT256
 const targetSC = ""; // Target Smart Contract Address. Hex String
 const userEOA = ""; // User's EOA. Hex String
-const userEOA = ""; // User's EOA. Hex String
 const UniversalPluginGlobalHash = ""; // The Global Hash for that UP on that blockchain. String
 ```
+
+## Widget URL Integration
+
+The SurferMonkey Widget is hosted and maintained on GitHub pages. You can directly integrate the widget into your dApp using the following URL:
+
+[https://surfermonkey.github.io/surfermonkey.widget.v1.github.io/](https://surfermonkey.github.io/surfermonkey.widget.v1.github.io/)
 
 ## Universal Plugin (UP) Global Hash
 
@@ -47,6 +52,25 @@ Found an issue or have suggestions? Reach out to our [support team](https://www.
 ## Extras
 - To open links in a new tab, use Ctrl+Click or Cmd+Click.
 
+## Developer Maintenance
+
+For developers maintaining the widget:
+
+- Use the following Git commands to update the main branch:
+  ```
+  git add .
+  git commit -m "Your commit message"
+  git push origin main
+  ```
+
+- To update the GitHub Pages with the latest changes, run:
+  ```
+  npm run deploy
+  ```
+
 ## License
 
 [All Rights Reserved](#)
+```
+
+This updated README contains instructions for developer maintenance as well as the direct URL for widget integration.

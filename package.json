@@ -1,7 +1,7 @@
 {
   "name": "sm_widget",
   "version": "0.1.0",
-  "homepage": "https://surfermonkey.github.io/surfermonkey.widget.v1.github.io/",
+  "homepage": "https://surfermonkey.widget.v1.github.io",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
