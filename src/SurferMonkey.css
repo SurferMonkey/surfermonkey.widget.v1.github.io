@@ -81,24 +81,16 @@ button.selected {
   /* to clear the float */
   border-radius: 5px;
   margin-top: 20px;
+  height: auto;
 }
 
 .footer-logo {
-  max-width: 250px;
+  margin: 5px;
+  max-width: 400px;
   /* adjust based on your logo's dimensions and the available width of the plugin */
   height: auto;
   float: right;
   /* position the logo on the right side of the footer */
-}
-
-
-.footer-logo2 {
-  max-width: 150px;
-  /* adjust based on your logo's dimensions and the available width of the plugin */
-  height: auto;
-  float: right;
-  /* position the logo on the right side of the footer */
-  margin: 10px;
 }
 
 .dev-logs-button {
