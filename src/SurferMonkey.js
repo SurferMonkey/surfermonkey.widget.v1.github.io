@@ -4,7 +4,6 @@ import DepositNative from './components/DepositNative';
 import Withdraw from './components/Withdraw';
 import DeveloperLogs from './components/DeveloperLogs';
 import SurferMonkeyLogo from "./Images/SurferMonkey.png";
-import TagLine from "./Images/TagLine.png";
 import './SurferMonkey.css';
 
 function SurferMonkey({ userMessage }) {

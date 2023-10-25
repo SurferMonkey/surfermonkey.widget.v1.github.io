@@ -3,7 +3,6 @@ import '../styles/Approve.css';
 
 function Approve({ userMessage }) {
   // Destructure userIntention to get the tokenAddress and amount
-  console.log("HAHAHAH", userMessage)
   //const tokenAddressString = userMessage.depositPublicDataParams.ERC20_SC;
   const tokenAddress = userMessage.depositPublicDataParams.ERC20_SC;//tokenAddressString.slice(0, 6) + '...' + tokenAddressString.slice(-6);
 

@@ -20,8 +20,8 @@ Before sending data to the SurferMonkey widget, ensure you've populated the foll
 
 ```javascript
 const ERC20_SC = ""; // Only for ERC20, blank string if not used. Hex String
-const targetBlockchainString = ""; // Refer config for supported blockchains. String
-const sourceBlockchainString = "";
+const targetBlockchain = ""; // Refer config for supported blockchains. Integer
+const sourceBlockchain = "";
 const selectedFunc = 1; // (Native: nativeFunc = 1) OR (ERC20: erc20Func = 2). Integer
 const functionHeader = ""; // Function header from the target function. String
 const functionName = ""; // Function name from the target function. String

@@ -44,8 +44,8 @@ export function getPublicParams(ERC20_SC, amount, func) {
 // Create user message
 export function createUserMessage(
     selectedFunc,
-    targetBlockchainString,
-    sourceBlockchainString,
+    targetBlockchain,
+    sourceBlockchain,
     ERC20_SC,
     amount,
     functionHeader,
@@ -55,8 +55,6 @@ export function createUserMessage(
     userEOA,
     UniversalPluginGlobalHash
 ) {
-    const targetBlockchain = CHAIN_IDS[targetBlockchainString]
-    const sourceBlockchain = CHAIN_IDS[sourceBlockchainString]
     const userMessage = {
         selectedFunc: selectedFunc,
         targetBlockchain: targetBlockchain,
