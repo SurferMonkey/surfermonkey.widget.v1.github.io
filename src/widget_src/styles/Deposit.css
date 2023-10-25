@@ -1,0 +1,28 @@
+/* Deposit.css */
+.deposit > *:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.section {
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+}
+
+.section h3 {
+  margin-top: 0;
+}
+
+.clickable-title {
+  cursor: pointer;
+  font-weight: bold;
+  transition: color 0.3s;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.clickable-title:hover {
+  color: #4682B4; /* Change this to whatever color you prefer */
+}

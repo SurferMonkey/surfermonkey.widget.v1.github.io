@@ -1,0 +1,114 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align to the top */
+  /*background-color: #f0e4dc;*/
+  /* This sets the background color for the entire screen */
+}
+
+.app-container {
+  background: #CCDDFF;/*linear-gradient(to bottom, #CCDDFF, #FFFFFF);*/
+  /* Light neon blue gradient to white */
+  border-radius: 10px;
+  /* by default, it will take up 80% of the screen width */
+  min-width: 550px;
+  max-width: 550px;
+  min-height: 300px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 2px solid #5A5A5A;
+  /* Tech minimalist blue border */
+  margin: 50px auto 0 auto; /* 200px margin at the top */
+}
+
+
+/* For screens smaller than 600px */
+@media (max-width: 600px) {
+  .app-container {
+    width: 90%;
+    /* On smaller screens, the container will take up 90% of the width */
+  }
+}
+
+/* For screens smaller than 400px */
+@media (max-width: 400px) {
+  .app-container {
+    width: 100%;
+    /* On very small screens, the container will take up the full width */
+    border-radius: 0;
+    /* Optional: remove rounded corners for very small screens */
+  }
+}
+
+
+.menu {
+  display: flex;
+  gap: 0px;
+  margin-bottom: 20px;
+}
+
+button {
+  cursor: pointer;
+  background-color: #4682B4;
+  /* Adjust this as desired */
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #5A9BD4;
+  /* Adjust this as desired */
+}
+
+button.selected {
+  background-color: #FF6EC7;
+  /* Neon pink for the selected/active view */
+  cursor: default;
+  /* No need to show the pointer cursor for the active view button */
+}
+
+.app-footer {
+  padding: 10px;
+  background-color: #000000;
+  /* light gray background */
+  overflow: auto;
+  /* to clear the float */
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.footer-logo {
+  max-width: 250px;
+  /* adjust based on your logo's dimensions and the available width of the plugin */
+  height: auto;
+  float: right;
+  /* position the logo on the right side of the footer */
+}
+
+
+.footer-logo2 {
+  max-width: 150px;
+  /* adjust based on your logo's dimensions and the available width of the plugin */
+  height: auto;
+  float: right;
+  /* position the logo on the right side of the footer */
+  margin: 10px;
+}
+
+.dev-logs-button {
+  background: none;
+  border: none;
+  color: rgb(168, 167, 167); /* Light text color */
+  cursor: pointer;
+  text-decoration: underline; /* Make it look clickable */
+  margin-top: 10px; /* Some spacing above the footer */
+}
+.dev-logs-button:hover {
+  color: darkgray; /* Slightly darker on hover */
+}

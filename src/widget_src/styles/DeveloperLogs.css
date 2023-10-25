@@ -1,0 +1,35 @@
+.Console {
+  background-color: #1e1e1e; /* Dark background for the console */
+  color: #A9B7C6; /* Light text color for better contrast */
+  padding: 10px;
+  border-radius: 5px; /* Slight rounding of corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for a lifted effect */
+  overflow: auto; /* To handle long logs */
+  max-height: 300px; /* Setting a max height to make it scrollable if logs are lengthy */
+}
+
+.Console h3 {
+  font-family: 'Courier New', Courier, monospace; /* Monospaced font for the title */
+  border-bottom: 2px solid #A9B7C6; /* A separator line under the title */
+  padding-bottom: 5px; /* Some space under the title */
+  margin-bottom: 10px; /* Space between title and logs */
+  color: #FFC66D; /* A different color for the title to distinguish */
+}
+
+.Console pre {
+  font-family: 'Courier New', Courier, monospace; /* Monospaced font for the logs */
+  margin: 0; /* Reset margin for <pre> */
+  white-space: pre-wrap; /* To wrap the logs if they are too long */
+}
+
+.Console h4 {
+  font-family: 'Courier New', Courier, monospace; /* Monospaced font for the h2 title */
+  color: #04D9FF; /* A distinct color for the h2 title to make it stand out */
+  padding: 10px 0; /* Some padding for spacing */
+  margin: 0; /* Reset margin */
+  border-bottom: 2px solid #A9B7C6; /* A separator line under the h2 title */
+  font-size: 1em; /* Slightly larger font size than the rest of the text */
+  font-weight: bold; /* Bold font weight for emphasis */
+  letter-spacing: 1px; /* Slightly spaced out letters for better visibility */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* A subtle text shadow for depth */
+}

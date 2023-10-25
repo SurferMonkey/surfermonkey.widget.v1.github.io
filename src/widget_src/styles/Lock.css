@@ -1,0 +1,39 @@
+.Lock {
+    background-color: #f5f5f5;
+    /* Light gray background color */
+    border-radius: 5px;
+    padding: 10px;
+}
+
+
+.buttonX {
+    display: flex;
+    justify-content: center;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    outline: none;
+    background: linear-gradient(90deg, #FF6EC7, #4682B4);
+    /* Neon pink to blue gradient */
+    color: white;
+    /* Text color */
+    transition: transform 0.2s, box-shadow 0.2s;
+    /* Smooth transition for hover effects */
+  }
+  
+  .buttonX:hover {
+    transform: translateY(-2px);
+    /* Slightly raise the button */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    /* Add a shadow for a "lifted" effect */
+  }
+  
+  .buttonX:active {
+    transform: translateY(0);
+    /* Reset button position when pressed */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    /* Shorten the shadow when button is pressed */
+  }
