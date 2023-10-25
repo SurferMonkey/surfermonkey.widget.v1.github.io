@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/surfermonkey.widget.v1.github.io/static/css/main.12319f71.css",
-    "main.js": "/surfermonkey.widget.v1.github.io/static/js/main.3b46d8a9.js",
-    "static/media/SurferMonkey.png": "/surfermonkey.widget.v1.github.io/static/media/SurferMonkey.a7ee923d1f16d769d027.png",
+    "main.css": "/surfermonkey.widget.v1.github.io/static/css/main.ec921b0f.css",
+    "main.js": "/surfermonkey.widget.v1.github.io/static/js/main.ce478320.js",
+    "static/media/SurferMonkey.png": "/surfermonkey.widget.v1.github.io/static/media/SurferMonkey.1ea51d8512629fe5899c.png",
     "static/media/TagLine.png": "/surfermonkey.widget.v1.github.io/static/media/TagLine.ce920a3c3d78aabad91e.png",
     "index.html": "/surfermonkey.widget.v1.github.io/index.html",
-    "main.12319f71.css.map": "/surfermonkey.widget.v1.github.io/static/css/main.12319f71.css.map",
-    "main.3b46d8a9.js.map": "/surfermonkey.widget.v1.github.io/static/js/main.3b46d8a9.js.map"
+    "main.ec921b0f.css.map": "/surfermonkey.widget.v1.github.io/static/css/main.ec921b0f.css.map",
+    "main.ce478320.js.map": "/surfermonkey.widget.v1.github.io/static/js/main.ce478320.js.map"
   },
   "entrypoints": [
-    "static/css/main.12319f71.css",
-    "static/js/main.3b46d8a9.js"
+    "static/css/main.ec921b0f.css",
+    "static/js/main.ce478320.js"
   ]
 }
