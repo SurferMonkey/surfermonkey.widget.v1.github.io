@@ -59,7 +59,7 @@ For developers maintaining the widget:
 
 - To update the GitHub Pages with the latest changes, run:
   ```
-  npm run deploy
+  npm run deploy -- -m "Your custom message"
   ``
 
 ## Feedback and Support
