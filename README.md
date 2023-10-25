@@ -1,6 +1,6 @@
 ![SurferMonkey Logo](./public/SM-Full-Reverse.png)
 
-# SurferMonkey Widget Integration
+# SurferMonkey Widget Integration!
 SurferMonkey provides developers with a streamlined way to integrate Anonymous and Compliant capabilities into their applications. By leveraging our widget, you can enable users to perform actions across multiple blockchains with ease.
 
 ## Integration Levels
