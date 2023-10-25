@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import SurferMonkey from './widget_src/SurferMonkey';
-import * as configWidget from './widget_src/configWidget';
+import SurferMonkey from './SurferMonkey';
+import * as configWidget from './configWidget';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
