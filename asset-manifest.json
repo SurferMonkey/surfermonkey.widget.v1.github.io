@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/surfermonkey.widget.v1.github.io/static/css/main.ec921b0f.css",
-    "main.js": "/surfermonkey.widget.v1.github.io/static/js/main.ce478320.js",
+    "main.js": "/surfermonkey.widget.v1.github.io/static/js/main.033efe82.js",
     "static/media/SurferMonkey.png": "/surfermonkey.widget.v1.github.io/static/media/SurferMonkey.1ea51d8512629fe5899c.png",
     "static/media/TagLine.png": "/surfermonkey.widget.v1.github.io/static/media/TagLine.ce920a3c3d78aabad91e.png",
     "index.html": "/surfermonkey.widget.v1.github.io/index.html",
     "main.ec921b0f.css.map": "/surfermonkey.widget.v1.github.io/static/css/main.ec921b0f.css.map",
-    "main.ce478320.js.map": "/surfermonkey.widget.v1.github.io/static/js/main.ce478320.js.map"
+    "main.033efe82.js.map": "/surfermonkey.widget.v1.github.io/static/js/main.033efe82.js.map"
   },
   "entrypoints": [
     "static/css/main.ec921b0f.css",
-    "static/js/main.ce478320.js"
+    "static/js/main.033efe82.js"
   ]
 }
