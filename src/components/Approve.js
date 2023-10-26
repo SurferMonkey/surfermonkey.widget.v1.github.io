@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/Approve.css';
+import * as Aux from '../tools/Aux.js';
 
 function Approve({ userMessage }) {
   // Destructure userIntention to get the tokenAddress and amount
@@ -7,6 +8,8 @@ function Approve({ userMessage }) {
   const tokenAddress = userMessage.depositPublicDataParams.ERC20_SC;//tokenAddressString.slice(0, 6) + '...' + tokenAddressString.slice(-6);
 
   const amount = userMessage.depositPublicDataParams.amount;
+  const amountFormat = Aux.formatBigInt(amount, userMessage.decimals, userMessage.decimals)
+  const amountFormatST = amountFormat +"" 
 
   return (
     <div className="Approve">
@@ -30,7 +33,7 @@ function Approve({ userMessage }) {
         Amount (base unit):
           <input 
             type="text" 
-            value={amount} 
+            value={amountFormatST} 
             readOnly
             disabled  // Disable the input
             placeholder="Amount (base unit)" 
