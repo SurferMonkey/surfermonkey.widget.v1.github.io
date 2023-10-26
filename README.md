@@ -20,16 +20,16 @@ Before sending data to the SurferMonkey widget, ensure you've populated the foll
 
 ```javascript
 const ERC20_SC = ""; // Only for ERC20, blank string if not used. Hex String
-const targetBlockchain = ""; // Refer config for supported blockchains. Integer
-const sourceBlockchain = "";
+const targetBlockchain = 1; // Refer config for supported blockchains. Integer
+const sourceBlockchain = 1; // Refer config for supported blockchains. Integer
 const selectedFunc = 1; // (Native: nativeFunc = 1) OR (ERC20: erc20Func = 2). Integer
 const functionHeader = ""; // Function header from the target function. String
 const functionName = ""; // Function name from the target function. String
 const payloadParmsArr = []; // Target function parameters. Array of strings
-const amount = 1; // Value amount (ERC20 or Native) to be locked in the system. UINT256
+const amount = 1; // Smallest denomination unit amount (ERC20 or Native). UINT256
 const targetSC = ""; // Target Smart Contract Address. Hex String
 const userEOA = ""; // User's EOA. Hex String
-const UniversalPluginGlobalHash = ""; // The Global Hash for that UP on that blockchain. String
+const UniversalPluginGlobalHash = ""; // The Global Hash for that UP on that blockchain. Hex String
 ```
 
 ## Widget URL Integration
