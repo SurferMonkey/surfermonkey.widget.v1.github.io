@@ -28,7 +28,6 @@ const functionName = ""; // Function name from the target function. String
 const payloadParmsArr = []; // Target function parameters. Array of strings
 const amount = 1; // Smallest denomination unit amount (ERC20 or Native). UINT256
 const targetSC = ""; // Target Smart Contract Address. Hex String
-const userEOA = ""; // User's EOA. Hex String
 const UniversalPluginGlobalHash = ""; // The Global Hash for that UP on that blockchain. Hex String
 ```
 
