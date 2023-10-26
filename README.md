@@ -65,9 +65,6 @@ For developers maintaining the widget:
 ## Feedback and Support
 Found an issue or have suggestions? Reach out to our [support team](https://www.surfermonkey.io/) or open an issue on this repository.
 
-## Extras
-- To open links in a new tab, use Ctrl+Click or Cmd+Click.`
-
 ## Disclaimer
 
 **Work in Progress:** This software is currently under active development and may undergo significant changes.
