@@ -6,7 +6,7 @@ function DepositNative({ userMessage }) {
 
   return (
     <div className="deposit">
-      <h2>Anonymous Native Intention</h2>
+      <h2>Anonymous Native Intent</h2>
       <hr />
       <Lock userMessage={userMessage}/>
     </div>

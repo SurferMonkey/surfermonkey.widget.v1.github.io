@@ -31,9 +31,11 @@ export async function getCurrentChainProvider() {
 export const messageOptions = {
     ERROR_TYPE: "error",
     SUCCES_TYPE: 'success',
+    INFO_TYPE: "info",
     SUCCES_APPROVED_MESSAGE: "🎉 Approved tokens Ok!✨",
     SUCCES_MINTED_MESSAGE: "🎉 Anonymous transaction minted! 🔒✨<br />🚀 zkMiners will pick up your transaction in 1-2 minutes ⏲️⛏️",
     SUCCES_MINTED_zkSNARK: "🎉 Anonymous transaction minted! 🔒✨<br />🚀 Your zkSNARK transaction has been successfully settled 🎊💫",
+    INFO_MINTING_MESSAGE: "Transaction pending, click in the scan link",
     ERROR_MESSAGE: "Oops! An error occurred during the transaction 😔",
     WRONG_NET_MESSAGE: "Oops! Wrong Meta Mask Network. Check your destination Chain in DevLogs",
     CANCELED_MESSAGE: "Oops! You canceled the transaction"

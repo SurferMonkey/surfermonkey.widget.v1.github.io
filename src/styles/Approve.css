@@ -24,17 +24,24 @@
   background-color: white;
 }
 
-.electric-blue {
-  color: #7df9ff;
-  font-weight: bold;
-  font-size: 1em;
-  text-decoration: none;
-  padding: 4px 6px;
-  display: inline-block;
-  transition: all 0.3s ease;
-  margin-top: 10px;
+.link-container {
+  margin-top: 10px;   /* Space between the button and the link */
+  width: auto;
 }
 
-.hidden {
-  display: none !important;
+#ApproveLink {
+  text-decoration: underline;   /* Underline for clarity that it's a link */
+  color: var(--primary-navy); /* Assuming you want the primary color from your palette; adjust as needed */
+  font-size: 15px;              /* Smaller font size than the button for hierarchy */
+  display: block;               /* To make sure it takes the full width and is centered below */
+  text-align: center;           /* Center the text */
+  padding-bottom: 10px;
+}
+
+#ApproveLink.hidden {
+  display: none;  /* Hide the link when the class 'hidden' is applied */
+}
+
+#ApproveLink:hover {
+  color: var(--gradient-color3-end); /* Darker shade on hover for interactivity; adjust to your preference */
 }

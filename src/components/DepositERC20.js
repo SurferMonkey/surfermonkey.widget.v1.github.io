@@ -6,7 +6,7 @@ import '../styles/Deposit.css';
 function DepositERC20({ userMessage, setIsLoading, setMessageString, setMessageType, setShowMessage, setLoadingText }) {
   return (
     <div className="deposit">
-      <h1>Anonymous ERC20 Intention</h1>
+      <h1>Anonymous ERC20 Intent</h1>
       <hr />
       <Approve 
         userMessage={userMessage} 

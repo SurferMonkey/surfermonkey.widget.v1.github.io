@@ -185,10 +185,10 @@ h3 {
     border: 1px solid var(--gradient-color1-end);
     color: black;
     border-radius: 100px;
-    width: 150px;
-    margin-top: 20px;
+    min-width: 200px;
+    min-height: 30px;
+    margin-top: 10px;
     margin-bottom: 15px;
-    height: auto;
     font-size: 20px;
     font-weight: 400;
     position: relative;
@@ -199,6 +199,7 @@ h3 {
 .secondary-button:hover {
     background-color: var(--gradient-color1-start);
     border: 1px solid var(--gradient-color1-end);
+    cursor: pointer;
 }
 
 .text-muted {

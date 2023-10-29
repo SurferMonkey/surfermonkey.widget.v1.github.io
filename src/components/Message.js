@@ -6,7 +6,7 @@ const Message = ({ message, onClose, type }) => {
   const [isFadingOut, setIsFadingOut] = useState(false);
 
   useEffect(() => {
-    const duration = type === 'success' ? 60000 : 5000;
+    const duration = (type === 'success' || type === 'info') ? 60000 : type === 'error' ? 5000 : 0;
     const timer = setTimeout(() => {
       setIsFadingOut(true);
       setTimeout(onClose, 1000); // 1000 ms for the fading effect duration
@@ -16,7 +16,7 @@ const Message = ({ message, onClose, type }) => {
 
   return (
   <div
-    className={`message ${type === 'success' ? 'success-message' : 'error-message'}${isFadingOut ? ' fade-out' : ''}`}
+  className={`message ${type === 'success' ? 'success-message' : type === 'error' ? 'error-message' : type === 'info' ? 'info-message' : ''}${isFadingOut ? ' fade-out' : ''}`}
     onClick={onClose}
   >
     <div
@@ -31,5 +31,3 @@ const Message = ({ message, onClose, type }) => {
 };
 
 export default Message;
-
-

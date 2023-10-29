@@ -18,6 +18,16 @@ function Approve({ userMessage, setIsLoading, setMessageString, setMessageType, 
   const amountFormat = Aux.formatBigInt(amount, userMessage.decimals, userMessage.decimals)
   const amountFormatST = amountFormat + ""
 
+  async function checkCorrectNet(_userMessage) {
+    const currentChainInfo = await Aux.getCurrentChainProvider()
+    if (currentChainInfo.networkId !== Config.CHAIN_CONNECTIONS[_userMessage.sourceBlockchain].networkId) {
+      setMessageType(Aux.messageOptions.ERROR_TYPE);
+      setMessageString(Aux.messageOptions.WRONG_NET_MESSAGE);
+      return false
+    }
+    return true
+  }
+
   function preApprove() {
     const transLinkElem = document.getElementById("ApproveLink");
     const approveButtonElem = document.getElementById("ApproveButton");
@@ -29,16 +39,7 @@ function Approve({ userMessage, setIsLoading, setMessageString, setMessageType, 
     // Display loading status
     setIsLoading(true);
     setLoadingText('Go to Meta Mask and Approve Token...');
-  }
-
-  async function checkCorrectNet(_userMessage) {
-    const currentChainInfo = await Aux.getCurrentChainProvider()
-    if (currentChainInfo.networkId !== Config.CHAIN_CONNECTIONS[_userMessage.sourceBlockchain].networkId) {
-      setMessageType(Aux.messageOptions.ERROR_TYPE);
-      setMessageString(Aux.messageOptions.WRONG_NET_MESSAGE);
-      return false
-    }
-    return true
+    setShowMessage(false)
   }
 
   async function postApprove(transaction) {
@@ -51,18 +52,21 @@ function Approve({ userMessage, setIsLoading, setMessageString, setMessageType, 
     transLinkElem.href = transactionLink;
     transLinkElem.classList.remove("hidden");
     transLinkElem.innerHTML = `${currentChainInfo.name} scanner`;
-    approveButtonElem.innerHTML = "Transaction is getting added to the Blockchain...";
+    //approveButtonElem.innerHTML = "Transaction is getting added to the Blockchain...";
+    setMessageType(Aux.messageOptions.INFO_TYPE);
+    setMessageString(Aux.messageOptions.INFO_MINTING_MESSAGE);
+    setShowMessage(true)
 
     setIsLoading(false);
     setLoadingText("");
-    setShowMessage(false);
+    //setShowMessage(false);
   }
 
   function endApprove() {
     setIsLoading(false);
     setLoadingText("");
     const approveButtonElem = document.getElementById("ApproveButton");
-    approveButtonElem.innerHTML = "Approve";
+    //approveButtonElem.innerHTML = "Approve";
     approveButtonElem.classList.remove("disabled");
     approveButtonElem.removeAttribute("disabled");
   }
@@ -135,8 +139,10 @@ function Approve({ userMessage, setIsLoading, setMessageString, setMessageType, 
       {/* Approve Button */}
       <div className="button-container">
         <button className="secondary-button" onClick={getApproveSignature} id="ApproveButton">Approve</button>
-        <a href="" className="hidden" target="_blank" rel="noreferrer" id="ApproveLink"></a>
-      </div>
+        </div>
+        <div className="link-container">
+          <a href="" className="hidden" target="_blank" rel="noreferrer" id="ApproveLink">Link Text</a>
+        </div>
     </div>
   );
 }
