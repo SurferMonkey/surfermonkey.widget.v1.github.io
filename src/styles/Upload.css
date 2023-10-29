@@ -26,24 +26,27 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(76, 81, 191, 0.7);
-  border: 2px solid white;
-  color: white;
+  /*background-color: rgba(76, 81, 191, 0.7);*/
+  background-color: var(--gradient-color1-end);
+  /*background-image: var(--gradient-1);*/
+  color: black;
   text-align: center;
   text-decoration: none;
   font-size: 16px;
   transition-duration: 0.4s;
   padding: 12px 24px;
-  width: 100%;
+  width: 50%;
   box-sizing: border-box;
   outline: none;
-  border-radius: 8px;
+  border-radius: 50px;
+  border: 1px solid var(--gradient-color1-end);
 }
 
 .button:hover {
-  background-color: rgba(203, 213, 225, 1);
-  border-color: black;
-  color: black;
+  /*background: var(--gradient-color3-start);
+  border-color: var(--gradient-color3-end);*/
+  background-color: var(--gradient-color1-start);
+    border: 1px solid var(--gradient-color1-end);
   cursor: pointer;;
 }
 

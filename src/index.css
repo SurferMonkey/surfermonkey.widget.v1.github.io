@@ -1,0 +1,206 @@
+:root {
+    /* Primary Colors */
+    --primary-navy: #0F1C4C;
+    --primary-color1: #0BFDE3;
+    --primary-color2: #0CA0FF;
+    --primary-color3: #A773F9;
+    --primary-gradient-color1-start: #0BFDE3;
+    --primary-gradient-color1-middle: #0CA0FF;
+    --primary-gradient-color1-end: #A773F9;
+
+
+    /* Secondary Colors */
+    --secondary-color1: #999999;
+    --secondary-color2: #D8D8D8;
+
+    /* Secondary Gradients */
+    --gradient-color1-start: #CDFEFD;
+    --gradient-color1-end: #0BFDE3;
+    --gradient-color2-start: #B8E6FF;
+    --gradient-color2-end: #0CA0FF;
+    --gradient-color3-start: #CDBDF4;
+    --gradient-color3-end: #A773F9;
+
+    /*gradients done*/
+    --gradient-00: linear-gradient(to top right,
+            var(--primary-gradient-color1-start) 0%,
+            var(--primary-gradient-color1-middle) 10%,
+            var(--primary-gradient-color1-middle) 70%,
+            var(--primary-gradient-color1-end) 100%);
+
+
+    --gradient-00r: linear-gradient(to top right,
+            var(--primary-gradient-color1-end) 0%,
+            var(--primary-gradient-color1-middle) 40%,
+            var(--primary-gradient-color1-middle) 80%,
+            var(--primary-gradient-color1-start) 100%);
+
+    --gradient-0: linear-gradient(to right, var(--primary-gradient-color1-start), var(--primary-gradient-color1-middle), var(--primary-gradient-color1-end));
+    --gradient-1: linear-gradient(to right, var(--gradient-color1-start), var(--gradient-color1-end));
+    --gradient-2: linear-gradient(to right, var(--gradient-color2-start), var(--gradient-color2-end));
+    --gradient-3: linear-gradient(to right, var(--gradient-color3-start), var(--gradient-color3-end));
+    --gradient-0r: linear-gradient(to right, var(--primary-gradient-color1-end), var(--primary-gradient-color1-middle), var(--primary-gradient-color1-start));
+    --gradient-4: linear-gradient(to right, var(--secondary-color1), var(--secondary-color2));
+    --gradient-1r: linear-gradient(to right, var(--gradient-color1-end), var(--gradient-color1-start));
+    --gradient-5: linear-gradient(to right,
+            var(--gradient-color2-start) 0%,
+            var(--gradient-color1-start) 10%,
+            var(--gradient-color1-end) 70%,
+            var(--gradient-color1-start) 90%,
+            var(--gradient-color2-start) 100%);
+
+    /*Margin*/
+    --margin-h: 30px;
+    --margin-v: 175px;
+}
+
+body,
+button,
+input,
+p,
+span,
+ol,
+l,
+textarea {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+}
+
+h1 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-size: 2.2rem;
+    /*color: var(--primary-color1) !important;*/
+    color: transparent;
+    /*text-shadow: 0 0 0 var(--primary-color1);*/
+    text-shadow: 0 0 0 white;
+    margin: 5px;
+}
+
+h2 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    /* This denotes semi-bold */
+    color: black;
+    font-size: 1.2rem;
+    margin: 10px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 700;
+    /* This denotes bold */
+    text-transform: uppercase;
+    /* This will make the text all caps */
+    color: var(--primary-color1);
+    margin: 5px;
+    font-size: 1rem;
+}
+
+
+.primary-button {
+    background-image: var(--gradient-0r);
+    color: white;
+    ;
+    border-radius: 100px;
+    width: 300px;
+    height: auto;
+    margin: 0 auto;
+    transition: background-image 0.3s, color 0.3s, transform 0.3s;
+    /* Add this line for smooth transition */
+    font-size: 30px;
+    font-weight: 600;
+    position: relative;
+    /* Add this line */
+    user-select: none;
+}
+
+.primary-button:hover {
+    color: var(--primary-navy);
+    transform: scale(1.05);
+    /* Slightly enlarge the button for a subtle effect */
+    animation: colorBlink 0.5s infinite;
+    /* Apply the animation here. Adjust the duration as needed */
+    cursor: pointer;
+    font-weight: 700;
+}
+
+@keyframes starAnimation {
+    0% {
+        transform: translateY(0) scale(0.5);
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-20px) scale(1);
+        opacity: 0;
+    }
+}
+
+.primary-button::before,
+.primary-button::after {
+    content: "★";
+    /* Unicode star character */
+    position: absolute;
+    font-size: 20px;
+    animation: starAnimation 1s infinite;
+}
+
+.primary-button::before {
+    left: 10%;
+    top: 50%;
+    animation-delay: 0.5s;
+}
+
+.primary-button::after {
+    right: 15%;
+    top: 40%;
+    font-size: 25px;
+    animation-delay: 0.2s;
+}
+
+.primary-button::before,
+.primary-button::after {
+    opacity: 0;
+    pointer-events: none;
+    /* Ensures that the star doesn't interfere with button clicks */
+}
+
+.primary-button:active {
+    transform: scale(0.95);
+    /* Slightly reduce the size of the button */
+    transition: transform 0.1s;
+    /* Make the effect fast for a button press feel */
+}
+
+
+
+.secondary-button {
+    background-color: var(--gradient-color1-end);
+    border: 1px solid var(--gradient-color1-end);
+    color: black;
+    border-radius: 100px;
+    width: 150px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    height: auto;
+    font-size: 20px;
+    font-weight: 400;
+    position: relative;
+    /* Add this line */
+    user-select: none;
+}
+
+.secondary-button:hover {
+    background-color: var(--gradient-color1-start);
+    border: 1px solid var(--gradient-color1-end);
+}
+
+.text-muted {
+    color: var(--secondary-color1);
+}

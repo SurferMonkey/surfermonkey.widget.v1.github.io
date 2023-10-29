@@ -4,11 +4,10 @@ import '../styles/Lock.css';
 function SettleZKP({ userMessage }) {
   return (
     <div className="Lock">
-      <h3>Settle the intention</h3>
-      <p>Make sure you are on the correct destination chain</p>
+      <h2 class="white-text">Settle the intention</h2>
       {/* Lock Button */}
-      <div className="buttonX">
-        Go!
+      <div className="button-container">
+        <button className="primary-button" id="SettleZKP">Go!</button>
       </div>
     </div>
   );

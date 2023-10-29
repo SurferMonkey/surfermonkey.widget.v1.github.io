@@ -7,7 +7,7 @@ function Witdhraw({ userMessage }) {
 
   return (
     <div className="deposit">
-      <h2>Settle Anonymous Intention</h2>
+      <h1>Settle Anonymous Intention</h1>
       <hr />
       <CreateZKP />
       <SettleZKP userMessage={userMessage}/>

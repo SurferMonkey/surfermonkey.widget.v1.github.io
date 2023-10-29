@@ -3,14 +3,27 @@ import Approve from './Approve';
 import Lock from './Lock';
 import '../styles/Deposit.css';
 
-function DepositERC20({ userMessage }) {
-
+function DepositERC20({ userMessage, setIsLoading, setMessageString, setMessageType, setShowMessage, setLoadingText }) {
   return (
     <div className="deposit">
-      <h2>Anonymous ERC20 Intention</h2>
+      <h1>Anonymous ERC20 Intention</h1>
       <hr />
-      <Approve userMessage={userMessage}/>
-      <Lock userMessage={userMessage}/>
+      <Approve 
+        userMessage={userMessage} 
+        setIsLoading={setIsLoading}
+        setMessageString={setMessageString}
+        setMessageType={setMessageType}
+        setShowMessage={setShowMessage}
+        setLoadingText={setLoadingText}
+      />
+      <Lock 
+        userMessage={userMessage} 
+        setIsLoading={setIsLoading}
+        setMessageString={setMessageString}
+        setMessageType={setMessageType}
+        setShowMessage={setShowMessage}
+        setLoadingText={setLoadingText}
+      />
     </div>
   );
 }

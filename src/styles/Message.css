@@ -1,0 +1,75 @@
+/* Message.css */
+.message {
+  position: absolute;
+  padding: 25px;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+  cursor: pointer;
+  z-index: 9999;
+  top: 0px;
+  right: 10px;
+  opacity: 1;
+  transition: opacity 0.5s ease-out;
+  width: auto;
+}
+
+.error-message {
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  color: #721c24;
+}
+
+.success-message {
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  color: #155724;
+}
+
+.message.fade-out {
+  opacity: 0;
+}
+
+.message::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+}
+
+.error-message::before {
+  border-color: #f5c6cb transparent transparent transparent;
+}
+
+.success-message::before {
+  border-color: #c3e6cb transparent transparent transparent;
+}
+
+/* Message.css */
+.close-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  background-color: #ddd;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  color: #444;
+}
+
+
+
+
+
+  

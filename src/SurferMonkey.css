@@ -9,7 +9,7 @@ body {
 }
 
 .app-container {
-  background: #CCDDFF;/*linear-gradient(to bottom, #CCDDFF, #FFFFFF);*/
+  background: var(--primary-navy);
   /* Light neon blue gradient to white */
   border-radius: 10px;
   /* by default, it will take up 80% of the screen width */
@@ -21,6 +21,8 @@ body {
   border: 2px solid #5A5A5A;
   /* Tech minimalist blue border */
   margin: 50px auto 0 auto; /* 200px margin at the top */
+  position: relative; /* Add this line */
+
 }
 
 
@@ -47,11 +49,12 @@ body {
   display: flex;
   gap: 0px;
   margin-bottom: 20px;
+  background: var(--primary-navy);
 }
 
 button {
   cursor: pointer;
-  background-color: #4682B4;
+  background-color: var(--gradient-color3-end);
   /* Adjust this as desired */
   color: white;
   border: none;
@@ -59,15 +62,17 @@ button {
   margin-right: 10px;
   border-radius: 5px;
   transition: background-color 0.2s;
+  width: 80px;
 }
 
 button:hover {
-  background-color: #5A9BD4;
+  background-color: var(--gradient-color3-start);
   /* Adjust this as desired */
 }
 
 button.selected {
-  background-color: #FF6EC7;
+  background-color: var(--primary-color1);
+  color: black;
   /* Neon pink for the selected/active view */
   cursor: default;
   /* No need to show the pointer cursor for the active view button */
@@ -80,13 +85,13 @@ button.selected {
   overflow: auto;
   /* to clear the float */
   border-radius: 5px;
-  margin-top: 20px;
+  margin-top: 50px;
   height: auto;
 }
 
 .footer-logo {
   margin: 5px;
-  max-width: 400px;
+  max-width: 350px;
   /* adjust based on your logo's dimensions and the available width of the plugin */
   height: auto;
   float: right;
@@ -103,4 +108,15 @@ button.selected {
 }
 .dev-logs-button:hover {
   color: darkgray; /* Slightly darker on hover */
+}
+
+.blockchainName-container {
+  text-align: right;
+  margin-left: auto;  /* Add this line */
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
 }

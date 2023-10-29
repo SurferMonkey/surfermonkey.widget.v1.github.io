@@ -1,0 +1,29 @@
+.loading-overlay {
+  position: absolute; /* Change from fixed to absolute */
+  top: 0;
+  left: 0;
+  width: 100%; /* Take full width of the parent */
+  height: 100%; /* Take full height of the parent */
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.loading-overlay.active {
+  pointer-events: all;
+}
+
+.loading-text {
+  width: 80%;
+  background-image: var(--gradient-3);
+  padding: 30px;
+  margin-top: 10px;
+  font-size: 2rem;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+}

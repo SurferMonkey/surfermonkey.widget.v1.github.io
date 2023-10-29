@@ -5,7 +5,7 @@ import Upload from './Upload';
 function CreateZKP({ userMessage }) {
   return (
     <div className="Approve">
-      <h3>Pick your transaction</h3>
+      <h2>Pick your transaction</h2>
       <Upload />
     </div>
   );

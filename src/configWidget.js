@@ -53,7 +53,8 @@ export function createUserMessage(
     payloadParmsArr,
     targetSC,
     userEOA,
-    UniversalPluginGlobalHash
+    UniversalPluginGlobalHash,
+    UniversalPluginAdress
 ) {
     const userMessage = {
         selectedFunc: selectedFunc,
@@ -63,7 +64,8 @@ export function createUserMessage(
         payload_data: { functionHeader, functionName, payloadParmsArr },
         targetSC: targetSC,
         userEOA: userEOA,
-        UniversalPluginGlobalHash: UniversalPluginGlobalHash
+        UniversalPluginGlobalHash: UniversalPluginGlobalHash,
+        UniversalPluginAdress: UniversalPluginAdress
     }
     return userMessage
 }
