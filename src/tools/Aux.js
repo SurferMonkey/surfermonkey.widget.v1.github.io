@@ -43,11 +43,16 @@ export const messageOptions = {
     ERR_DATA_CREATE_MESSAGE: "Oops! There was an error while creating the data structures"
 }
 
-export async function obtainUSerEOA() {
+export async function connectWallet(){
     // Initialize the blockchain provider
     const provider = new ethers.BrowserProvider(window.ethereum, "any");
     // Request user to connect their wallet
     let x = await provider.send("eth_requestAccounts", []);
+}
+
+export async function obtainUSerEOA() {
+    // Initialize the blockchain provider
+    const provider = new ethers.BrowserProvider(window.ethereum, "any");
     // Obtain the signer from the connected wallet
     const signer = await provider.getSigner();
 

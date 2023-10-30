@@ -13,8 +13,8 @@ body {
   /* Light neon blue gradient to white */
   border-radius: 10px;
   /* by default, it will take up 80% of the screen width */
-  min-width: 550px;
-  max-width: 550px;
+  min-width: 570px;
+  max-width: 570px;
   min-height: 300px;
   padding: 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -51,6 +51,20 @@ body {
   margin-bottom: 20px;
   background: var(--primary-navy);
 }
+
+/*
+.menu {
+  display: flex;
+  gap: 0px;
+  margin-bottom: 20px;
+  background: var(--primary-navy);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 12px;
+}
+*/
 
 button {
   cursor: pointer;

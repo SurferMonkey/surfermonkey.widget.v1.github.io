@@ -16,7 +16,7 @@ let userMessage =
   "decimals": 18,
   "depositPublicDataParams": {
     "ERC20_SC": "0xE48e9019a0a99f5aFE296806Aa79d94F05096C69",
-    "amount": "1500000000000000000n",
+    "amount": "1500000000000000000",
     "func": 2
   },
   "payload_data": {

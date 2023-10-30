@@ -7,7 +7,6 @@ import SurferMonkeyLogo from "./Images/SurferMonkey.png";
 import LoadingOverlay from './components/LoadingOverlay.js';
 import Message from './components/Message';
 import * as Aux from './tools/Aux.js';
-import { ethers } from 'ethers'
 import './SurferMonkey.css';
 
 function SurferMonkey({ userMessage }) {
@@ -21,8 +20,7 @@ function SurferMonkey({ userMessage }) {
   const [loadingText, setLoadingText] = useState('Loading data, please wait...');
 
   async function connect(){
-    const provider = new ethers.BrowserProvider(window.ethereum, "any");
-    await provider.send("eth_requestAccounts", []);
+    await Aux.connectWallet()
   }
 
   // Network variables
