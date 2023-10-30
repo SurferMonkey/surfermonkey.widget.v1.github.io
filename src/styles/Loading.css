@@ -4,7 +4,7 @@
   left: 0;
   width: 100%; /* Take full width of the parent */
   height: 100%; /* Take full height of the parent */
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   display: flex;
   justify-content: center;
   align-items: center;

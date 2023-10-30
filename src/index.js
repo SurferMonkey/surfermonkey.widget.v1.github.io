@@ -24,7 +24,7 @@ let userMessage =
     "functionName": "transfer",
     "payloadParmsArr": [
       "0xDFeA3AA339836650a6BCC7B64720aBA82EE5cafb",
-      "1000000000000000000"
+      "1500000000000000000"
     ]
   },
   "targetSC": "0xE48e9019a0a99f5aFE296806Aa79d94F05096C69",

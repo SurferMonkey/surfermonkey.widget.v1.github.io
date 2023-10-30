@@ -504,8 +504,8 @@ export const chainConnectionsIds = [
 export const dAppGlobalHash = "0x5d1006d6c79bf00087d1adc65fdb9cd093960d335e35cc08039a90ecdbff8936"//"0xa872ab427ff9ee05ac278920d3f380e9ecd765fb19a218d07602d0be06e53483"//"0x189b07824df009c8602b7e81b5424c2942e9ce3e8230bbf28d4fd83d1de3cdef"//"0x05a1de5b45e64afd99d69edf7c0fde64ab0f19a9675b9a335e8a592189b97905"//"0x9070f29fe365fbb9a5225d053af3d2786485c651708ceb36ea2f73e6706ac61a"//"0x17282df9b2956cf8c1b67e36b4ed64228f2336034770b8c00f21c34dc8aa6944"//"0x1b61d75a84ebba870e71f309b481d6e7c51f18c38255622f156c4636da1298a9"//"0xb024e5f3095b0d3fc781b30bb9b6394071edbd474fff452abd9638096d5649ef"//"0x6984503b21e6f74c5899a90f310ac60988f0a06864126059d70b280d6fdb6865"//"0x1d92969757e64a2601c6b012d1ce42bae715eafa954632c838618531ff405bab"
 
 // As we have the SSL certificate, we have to connect to the SSL domain
-export const backend = "https://playground.surfermonkey.io:3001/"
+//export const backend = "https://playground.surfermonkey.io:3001/"
 
 
 // For local dev:
-//export const backend = "http://localhost:3001/"
+export const backend = "http://localhost:3001/"

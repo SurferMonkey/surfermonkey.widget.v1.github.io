@@ -38,7 +38,7 @@ function Approve({ userMessage, setIsLoading, setMessageString, setMessageType, 
 
     // Display loading status
     setIsLoading(true);
-    setLoadingText('Go to Meta Mask and Approve Token...');
+    setLoadingText('🌊 Go to Meta Mask and Approve Token... 🤙');
     setShowMessage(false)
   }
 
@@ -73,9 +73,9 @@ function Approve({ userMessage, setIsLoading, setMessageString, setMessageType, 
 
   async function getApproveSignature() {
     try {
+      preApprove()
       let okNet = await checkCorrectNet(userMessage)
-      if (okNet == true) {
-        preApprove()
+      if (okNet === true) {
         const UP_ADDRESS = userMessage.UniversalPluginAdress
         // Get Contract
         const provider = new ethers.BrowserProvider(window.ethereum, "any");
@@ -139,10 +139,10 @@ function Approve({ userMessage, setIsLoading, setMessageString, setMessageType, 
       {/* Approve Button */}
       <div className="button-container">
         <button className="secondary-button" onClick={getApproveSignature} id="ApproveButton">Approve</button>
-        </div>
-        <div className="link-container">
-          <a href="" className="hidden" target="_blank" rel="noreferrer" id="ApproveLink">Link Text</a>
-        </div>
+      </div>
+      <div className="link-container">
+        <a href="" className="hidden" target="_blank" rel="noreferrer" id="ApproveLink">Link Text</a>
+      </div>
     </div>
   );
 }

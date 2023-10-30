@@ -6,7 +6,7 @@ const Message = ({ message, onClose, type }) => {
   const [isFadingOut, setIsFadingOut] = useState(false);
 
   useEffect(() => {
-    const duration = (type === 'success' || type === 'info') ? 60000 : type === 'error' ? 5000 : 0;
+    const duration = (type === 'success' || type === 'info') ? 60000 : type === 'error' ? 10000 : 0;
     const timer = setTimeout(() => {
       setIsFadingOut(true);
       setTimeout(onClose, 1000); // 1000 ms for the fading effect duration

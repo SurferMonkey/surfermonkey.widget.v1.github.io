@@ -1,5 +1,6 @@
 /* global BigInt */
 import * as Config from '../config.js';
+import { ethers } from 'ethers'
 
 export function formatBigInt(bigIntNumber, scaleFactor, decimalPlaces) {
     // Convert BigInt to string and move the decimal point
@@ -38,5 +39,19 @@ export const messageOptions = {
     INFO_MINTING_MESSAGE: "Transaction pending, click in the scan link",
     ERROR_MESSAGE: "Oops! An error occurred during the transaction 😔",
     WRONG_NET_MESSAGE: "Oops! Wrong Meta Mask Network. Check your destination Chain in DevLogs",
-    CANCELED_MESSAGE: "Oops! You canceled the transaction"
+    CANCELED_MESSAGE: "Oops! You canceled the transaction",
+    ERR_DATA_CREATE_MESSAGE: "Oops! There was an error while creating the data structures"
+}
+
+export async function obtainUSerEOA() {
+    // Initialize the blockchain provider
+    const provider = new ethers.BrowserProvider(window.ethereum, "any");
+    // Request user to connect their wallet
+    let x = await provider.send("eth_requestAccounts", []);
+    // Obtain the signer from the connected wallet
+    const signer = await provider.getSigner();
+
+    // Fetch the connected wallet's address
+    const address = await signer.getAddress();
+    return address
 }
