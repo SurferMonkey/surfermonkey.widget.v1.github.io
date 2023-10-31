@@ -1,3 +1,6 @@
+import ABI_V1_General_Main from './Abi/UniversalPlugin.json'
+const ABI_V1_General = ABI_V1_General_Main.abi
+
 // Define constants for chain IDs
 export const CHAIN_IDS = {
     ETHEREUM: 1,
@@ -39,7 +42,8 @@ export const CHAIN_CONNECTIONS = {
                 {
                     version: "v1",
                     address: "ETH - UP Address",
-                    globalHash: "ETH - UP Global Hash"
+                    globalHash: "ETH - UP Global Hash",
+                    abi: "abi"
                 }
             ],
         supportedDapps: [
@@ -88,7 +92,8 @@ export const CHAIN_CONNECTIONS = {
                 {
                     version: "v1",
                     address: "0x491EEFbf2e4AEF483B545EE91385b66d89e0913b",
-                    globalHash: "0x6e31a2b2b010bedba30215337115763a20f6cba6f8cf5317641eddd923e8542c"
+                    globalHash: "0x6e31a2b2b010bedba30215337115763a20f6cba6f8cf5317641eddd923e8542c",
+                    abi: ABI_V1_General
                 }
             ],
         supportedDapps: [

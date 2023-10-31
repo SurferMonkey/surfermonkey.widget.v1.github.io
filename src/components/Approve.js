@@ -4,7 +4,7 @@ import { ethers } from 'ethers'
 import '../styles/Approve.css';
 import * as Aux from '../tools/Aux.js';
 import * as Config from '../config.js';
-import ERC0_ABI from '../Auxiliar/UsdcABI.json';
+import ERC0_ABI from '../Abi/UsdcABI.json';
 
 
 function Approve({ userMessage, setIsLoading, setMessageString, setMessageType, setShowMessage, setLoadingText }) {
@@ -46,7 +46,6 @@ function Approve({ userMessage, setIsLoading, setMessageString, setMessageType, 
     //const currentChainInfo = Config.CHAIN_CONNECTIONS[Number(userMessage.sourceBlockchain)];
     const currentChainInfo = await Aux.getCurrentChainProvider()
     const transLinkElem = document.getElementById("ApproveLink");
-    const approveButtonElem = document.getElementById("ApproveButton");
 
     const transactionLink = `${currentChainInfo.link}${transaction.hash}`;
     transLinkElem.href = transactionLink;
@@ -88,7 +87,7 @@ function Approve({ userMessage, setIsLoading, setMessageString, setMessageType, 
         await approveERC20.wait()
         console.log("Finalized ", approveERC20)
         setMessageType(Aux.messageOptions.SUCCES_TYPE);
-        setMessageString(Aux.messageOptions.SUCCES_APPROVED_MESSAGE);
+        setMessageString(Aux.messageOptions.SUCCES_MINTED_MESSAGE);
       }
     } catch (err) {
       let errorMessage
@@ -141,7 +140,7 @@ function Approve({ userMessage, setIsLoading, setMessageString, setMessageType, 
         <button className="secondary-button" onClick={getApproveSignature} id="ApproveButton">Approve</button>
       </div>
       <div className="link-container">
-        <a href="" className="hidden" target="_blank" rel="noreferrer" id="ApproveLink">Link Text</a>
+        <a href="" className="hidden link-container" target="_blank" rel="noreferrer" id="ApproveLink">Link Text</a>
       </div>
     </div>
   );

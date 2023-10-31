@@ -99,7 +99,7 @@ button.selected {
   overflow: auto;
   /* to clear the float */
   border-radius: 5px;
-  margin-top: 50px;
+  margin-top: 1px;
   height: auto;
 }
 
@@ -134,26 +134,4 @@ button.selected {
   display: flex;
   justify-content: center;
   margin-top: 10px;
-}
-
-.link-container {
-  margin-top: 10px;   /* Space between the button and the link */
-  width: auto;
-}
-
-.link-container {
-  text-decoration: underline;   /* Underline for clarity that it's a link */
-  color: var(--primary-navy); /* Assuming you want the primary color from your palette; adjust as needed */
-  font-size: 15px;              /* Smaller font size than the button for hierarchy */
-  display: block;               /* To make sure it takes the full width and is centered below */
-  text-align: center;           /* Center the text */
-  padding-bottom: 10px;
-}
-
-.hidden {
-  display: none;  /* Hide the link when the class 'hidden' is applied */
-}
-
-.link-container:hover {
-  color: var(--gradient-color3-end); /* Darker shade on hover for interactivity; adjust to your preference */
 }

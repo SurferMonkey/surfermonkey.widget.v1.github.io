@@ -107,6 +107,7 @@ h3 {
     width: 300px;
     height: auto;
     margin: 0 auto;
+    margin-bottom: 10px;
     transition: background-image 0.3s, color 0.3s, transform 0.3s;
     /* Add this line for smooth transition */
     font-size: 30px;
