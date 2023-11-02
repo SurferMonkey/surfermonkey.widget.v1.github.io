@@ -73,9 +73,9 @@ function SettleZKP({ globalVariable, setIsLoading, setMessageString, setMessageT
       console.log("FLAAG BB")
 
       const start = performance.now();
-      console.log("FLAAG CC")
+      console.log("FLAAG CCC")
       const zkp = await window.surfer.createProof(_ZKP_SIGNALS, CIRCUIT, PROVING_KEY);
-      console.log("FLAAG DD")
+      console.log("FLAAG DDD")
 
       console.log("My public Signals", zkp.publicSignals)
       const elapsedTime = (performance.now() - start) / 1000;

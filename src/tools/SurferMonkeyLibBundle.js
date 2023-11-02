@@ -1,4 +1,4 @@
-/* globals self */
+/* global BigInt */
 
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 
@@ -30431,6 +30431,13 @@ class WitnessCalculatorCircom2 {
         this.instance.exports.init((this.sanityCheck || sanityCheck) ? 1 : 0);
         const keys = Object.keys(input);
         var input_counter = 0;
+        
+        console.log('BigInt available:', typeof BigInt !== 'undefined');
+        const a = BigInt(2)
+        const b = BigInt(64)
+        const uint64_max2 = a ** b;
+        console.log('uint64_max:', uint64_max2);
+
         keys.forEach( (k) => {
             const h = fnvHash(k);
             const hMSB = parseInt(h.slice(0,8), 16);

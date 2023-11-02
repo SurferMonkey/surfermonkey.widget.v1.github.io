@@ -22,7 +22,9 @@
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
-    "ignorePatterns": ["/src/tools/SurferMonkeyLibBundle.js"],
+    "ignorePatterns": [
+      "/src/tools/SurferMonkeyLibBundle.js"
+    ],
     "extends": [
       "eslint:recommended",
       "react-app",
@@ -34,9 +36,11 @@
   },
   "browserslist": {
     "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
+      "chrome >= 67",
+      "edge >= 79",
+      "firefox >= 68",
+      "opera >= 54",
+      "safari >= 14"
     ],
     "development": [
       "last 1 chrome version",
@@ -45,6 +49,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "gh-pages": "^6.0.0"
   }
 }
