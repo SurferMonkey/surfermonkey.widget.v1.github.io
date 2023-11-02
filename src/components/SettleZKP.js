@@ -74,7 +74,6 @@ function SettleZKP({ globalVariable, setIsLoading, setMessageString, setMessageT
 
       const start = performance.now();
       console.log("FLAAG CC")
-      console.log(CIRCUIT)
       const zkp = await window.surfer.createProof(_ZKP_SIGNALS, CIRCUIT, PROVING_KEY);
       console.log("FLAAG DD")
 

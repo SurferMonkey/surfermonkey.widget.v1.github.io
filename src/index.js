@@ -16,7 +16,7 @@ let userMessage =
   "decimals": 18,
   "depositPublicDataParams": {
     "ERC20_SC": "0xE48e9019a0a99f5aFE296806Aa79d94F05096C69",
-    "amount": "1500000000000000000",
+    "amount": "100000000000000000000",
     "func": 2
   },
   "payload_data": {
@@ -24,12 +24,13 @@ let userMessage =
     "functionName": "transfer",
     "payloadParmsArr": [
       "0xDFeA3AA339836650a6BCC7B64720aBA82EE5cafb",
-      "1500000000000000000"
+      "100000000000000000000"
     ]
   },
   "targetSC": "0xE48e9019a0a99f5aFE296806Aa79d94F05096C69",
   "UniversalPluginGlobalHash": "0xa8d9ac0e570be234ab694443c29562cb8c0e011f1338550cec163939ca52325d",
-  "UniversalPluginAdress": "0x8896b9acBdfFf53e1fAb60e34eb0eC7245b69631"
+  "UniversalPluginAdress": "0x8896b9acBdfFf53e1fAb60e34eb0eC7245b69631",
+  "EOA": "0xDFeA3AA339836650a6BCC7B64720aBA82EE5cafb"
 }
 
 function receiveMessage(event) {
