@@ -86,7 +86,13 @@ function SurferMonkey({ userMessage }) {
           setShowMessage,
           setLoadingText
         })}
-      {activeView === 'withdraw' && <Withdraw />}
+      {activeView === 'withdraw' && <Withdraw 
+      setIsLoading={setIsLoading}
+      setMessageString={setMessageString}
+      setMessageType={setMessageType}
+      setShowMessage={setShowMessage}
+      setLoadingText={setLoadingText}
+      />}
       {/* Footer */}
       <footer className="app-footer">
         <a href="https://www.surfermonkey.io/" target="_blank" rel="noopener noreferrer">

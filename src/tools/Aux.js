@@ -41,10 +41,12 @@ export const messageOptions = {
     ERROR_MESSAGE: "Oops! An error occurred during the transaction 😔",
     ERROR_MESSAGE_2: "Oops! There was an error in the transaction Smart Contract logic. Have you approved the tokens? Do you have enough tokens?",
     WRONG_NET_MESSAGE: "Oops! Wrong Meta Mask Network. Check your destination Chain in DevLogs",
+    WRONG_FETCH_ZKP_SIGNALS: "Oops! There was an error while creating the ZKP input signals",
     CANCELED_MESSAGE: "Oops! You canceled the transaction",
     ERR_DATA_CREATE_MESSAGE: "Oops! There was an error while creating the data structures",
     ERR_Send_Data_SC_MESSAGE: "Oops! There was an error while sending your deposit to SurferMonkey Smart Contract",
-    ERR_FUNC_MESSAGE: "Oops! Wrong system function. Accepted Values 1 (Native), 2 (ERC20). Check de docs. 😊"
+    ERR_FUNC_MESSAGE: "Oops! Wrong system function. Accepted Values 1 (Native), 2 (ERC20). Check de docs. 😊",
+    ERR_CREATING_ZKP: "Oops! Error while creating the ZKP"
 }
 
 export async function connectWallet(){

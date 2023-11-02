@@ -22,10 +22,15 @@
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
+    "ignorePatterns": ["/src/tools/SurferMonkeyLibBundle.js"],
     "extends": [
+      "eslint:recommended",
       "react-app",
       "react-app/jest"
     ]
+  },
+  "globals": {
+    "self": "readonly"
   },
   "browserslist": {
     "production": [

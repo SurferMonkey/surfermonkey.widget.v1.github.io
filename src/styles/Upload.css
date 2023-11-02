@@ -52,5 +52,8 @@
 }
 
 .upload-status {
-  margin-top: 8px;
+  text-align: center; /* Center the text */
+  width: 100%; /* Match the width of the parent container */
+  margin-bottom: 10px; /* Spacing from the button */
+  display: block; /* Display as a block element */
 }

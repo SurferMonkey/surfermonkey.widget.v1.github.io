@@ -93,7 +93,9 @@ function Lock({ userMessage, setIsLoading, setMessageString, setMessageType, set
 
   function preSendDataToBlockchain(_userBlockchainData, _deposit) {
     const UP_ARR = Config.CHAIN_CONNECTIONS[Number(userMessage.sourceBlockchain)].universalUP
+    console.log("UP ARR! ", UP_ARR[0])
     const UP_ABI = UP_ARR.find(item => item.address === userMessage.UniversalPluginAdress).abi;
+    console.log(UP_ABI)
     // Create SC Object
     const UP_SC = new ethers.Contract(userMessage.UniversalPluginAdress, UP_ABI, _userBlockchainData.signer);
     setLoadingText('1. 🌊 Deposit object downloaded as JSON file. <br /> 2. 🤙 Go to Meta Mask and lock the value and message to SurferMonkey...');
@@ -151,7 +153,7 @@ function Lock({ userMessage, setIsLoading, setMessageString, setMessageType, set
     } catch (err) {
       console.error("Error during transaction:", err);
       setMessageType(Aux.messageOptions.ERROR_TYPE);
-      setMessageString(Aux.messageOptions.ERROR_MESSAGE_2);
+      setMessageString(Aux.messageOptions.ERROR_MESSAGE);
     }
     // Final touches
     setShowMessage(true)
@@ -160,7 +162,7 @@ function Lock({ userMessage, setIsLoading, setMessageString, setMessageType, set
 
   return (
     <div className="Lock">
-      <h2 class="white-text">Transfer the asset and message to SuferMonkey</h2>
+      <h2 className="white-text">Transfer the asset and message to SuferMonkey</h2>
 
       {/* Lock Button */}
       <div className="button-container">

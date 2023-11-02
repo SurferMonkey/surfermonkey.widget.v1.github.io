@@ -28,8 +28,8 @@ let userMessage =
     ]
   },
   "targetSC": "0xE48e9019a0a99f5aFE296806Aa79d94F05096C69",
-  "UniversalPluginGlobalHash": "0x6e31a2b2b010bedba30215337115763a20f6cba6f8cf5317641eddd923e8542c",
-  "UniversalPluginAdress": "0x491EEFbf2e4AEF483B545EE91385b66d89e0913b"
+  "UniversalPluginGlobalHash": "0xa8d9ac0e570be234ab694443c29562cb8c0e011f1338550cec163939ca52325d",
+  "UniversalPluginAdress": "0x8896b9acBdfFf53e1fAb60e34eb0eC7245b69631"
 }
 
 function receiveMessage(event) {

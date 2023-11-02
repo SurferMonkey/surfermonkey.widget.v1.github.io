@@ -2,11 +2,11 @@ import React from 'react';
 import '../styles/Approve.css';
 import Upload from './Upload';
 
-function CreateZKP({ userMessage }) {
+function CreateZKP({ userMessage, globalVariable, setGlobalVariable  }) {
   return (
     <div className="Approve">
       <h2>Pick your transaction</h2>
-      <Upload />
+      <Upload globalVariable={globalVariable} setGlobalVariable={setGlobalVariable} />
     </div>
   );
 }

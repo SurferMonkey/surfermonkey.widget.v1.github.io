@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import '../styles/Upload.css';
-import { CHAIN_IDS } from '../configWidget';
+import { CHAIN_CONNECTIONS } from '../config';
 
-const YourComponent = ({ globalVariable, setGlobalVariable }) => {
+const Upload = ({ globalVariable, setGlobalVariable }) => {
   const [fileUploaded, setFileUploaded] = useState(false);
   const [stringOut, setStringOut] = useState('');
 
   function selectNetName(value) {
-    const chainDetails = CHAIN_IDS[value];
+    console.log("THE VALUE!", value)
+    const chainDetails = CHAIN_CONNECTIONS[value];
+    console.log(chainDetails)
     return chainDetails ? chainDetails.name : "Unknown";
   }
 
@@ -30,13 +32,13 @@ const YourComponent = ({ globalVariable, setGlobalVariable }) => {
           const json = JSON.parse(e.target.result);
           let chainIdSource = selectNetName(json.sourceChainID)
           let chainIdTarget = selectNetName(json.destinationChainID)
+          console.log(chainIdSource, chainIdTarget, json)
 
           setGlobalVariable(json);
           setFileUploaded(true);
-          setStringOut(`${file.name}... <br /> From ${chainIdSource} <br /> To: ${chainIdTarget}`)
+          setStringOut(`File name: ${file.name} <br /> From ${chainIdSource} <br /> To: ${chainIdTarget}`)
 
           console.log("Print deposit object: ", json);
-          document.getElementById("trans2").classList.remove("hidden");
         } catch (err) {
           console.error('Error parsing JSON:', err);
         }
@@ -67,6 +69,6 @@ const YourComponent = ({ globalVariable, setGlobalVariable }) => {
   );
 };
 
-export default YourComponent;
+export default Upload;
 
 

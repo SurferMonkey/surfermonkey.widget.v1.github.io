@@ -87,7 +87,7 @@ function Approve({ userMessage, setIsLoading, setMessageString, setMessageType, 
         await approveERC20.wait()
         console.log("Finalized ", approveERC20)
         setMessageType(Aux.messageOptions.SUCCES_TYPE);
-        setMessageString(Aux.messageOptions.SUCCES_MINTED_MESSAGE);
+        setMessageString(Aux.messageOptions.SUCCES_APPROVED_MESSAGE);
       }
     } catch (err) {
       let errorMessage
