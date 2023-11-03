@@ -10,7 +10,7 @@ import * as Aux from './tools/Aux.js';
 import './SurferMonkey.css';
 
 function SurferMonkey({ userMessage }) {
-  const [activeView, setActiveView] = useState('start');
+  const [activeView, setActiveView] = useState('');
   const [showDevLogs, setShowDevLogs] = useState(false); // State to track visibility of DeveloperLogs
 
   const [isLoading, setIsLoading] = useState(false);
@@ -18,24 +18,50 @@ function SurferMonkey({ userMessage }) {
   const [messageType, setMessageType] = useState('');
   const [showMessage, setShowMessage] = useState(false);
   const [loadingText, setLoadingText] = useState('Loading data, please wait...');
-
-  async function connect(){
-    await Aux.connectWallet()
-  }
-
   // Network variables
   const [networkName, setNetworkName] = useState(''); // State to hold the network name
 
+  async function connect() {
+    await Aux.connectWallet()
+  }
+
   // Use effect to call the asynchronous function and set the network name
+  // Set inital view: Create or Settle
   useEffect(() => {
+    let isMounted = true; // flag to track whether the component is mounted
+
     async function fetchNetworkName() {
-      await connect()
-      const chainInfo = await Aux.getCurrentChainProvider()
-      setNetworkName(chainInfo.networkName);
+      if (isMounted) {
+        await connect();
+        const chainInfo = await Aux.getCurrentChainProvider();
+        setNetworkName(chainInfo.networkName);
+      }
     }
-    
+
+    function setinitView() {
+      if (userMessage.view === 1) {
+        console.log("Init view: Create")
+        // Create Intent
+        setActiveView('create')
+      } else if (userMessage.view === 2) {
+        // Settle ZKP
+        setActiveView('withdraw')
+        console.log("Init view: Withdraw")
+      } else {
+        console.log("View not recognized")
+        console.log(userMessage)
+        setActiveView('create')
+      }
+    }
+
+    setinitView();
     fetchNetworkName();
-  }, []); // Empty dependency array so this effect runs once when the component mounts
+
+    // Cleanup function to set the flag to false when the component unmounts
+    return () => {
+      isMounted = false;
+    };
+  }, [userMessage]);
 
 
   // Decide which component to render based on userMessage.selectedFunc
@@ -63,8 +89,8 @@ function SurferMonkey({ userMessage }) {
       )}
       <div className="menu">
         <button
-          onClick={() => setActiveView('start')}
-          className={activeView === 'start' ? 'selected' : ''}
+          onClick={() => setActiveView('create')}
+          className={activeView === 'create' ? 'selected' : ''}
         >
           Create
         </button>
@@ -78,7 +104,7 @@ function SurferMonkey({ userMessage }) {
           <h3>{networkName}</h3>
         </div>
       </div>
-      {activeView === 'start' &&
+      {activeView === 'create' &&
         renderDepositComponent({
           setIsLoading,
           setMessageString,
@@ -86,12 +112,12 @@ function SurferMonkey({ userMessage }) {
           setShowMessage,
           setLoadingText
         })}
-      {activeView === 'withdraw' && <Withdraw 
-      setIsLoading={setIsLoading}
-      setMessageString={setMessageString}
-      setMessageType={setMessageType}
-      setShowMessage={setShowMessage}
-      setLoadingText={setLoadingText}
+      {activeView === 'withdraw' && <Withdraw
+        setIsLoading={setIsLoading}
+        setMessageString={setMessageString}
+        setMessageType={setMessageType}
+        setShowMessage={setShowMessage}
+        setLoadingText={setLoadingText}
       />}
       {/* Footer */}
       <footer className="app-footer">

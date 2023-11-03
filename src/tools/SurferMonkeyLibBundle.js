@@ -30431,12 +30431,6 @@ class WitnessCalculatorCircom2 {
         this.instance.exports.init((this.sanityCheck || sanityCheck) ? 1 : 0);
         const keys = Object.keys(input);
         var input_counter = 0;
-        
-        console.log('BigInt available:', typeof BigInt !== 'undefined');
-        const a = BigInt(2)
-        const b = BigInt(64)
-        const uint64_max2 = a ** b;
-        console.log('uint64_max:', uint64_max2);
 
         keys.forEach( (k) => {
             const h = fnvHash(k);

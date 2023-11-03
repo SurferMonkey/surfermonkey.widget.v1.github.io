@@ -1,4 +1,5 @@
 import ABI_V1_General_Main from './Abi/UniversalPlugin.json'
+import ABI_MIXER_GENERAL from './Abi/SurferMonkeyMixer.json'
 const ABI_V1_General = ABI_V1_General_Main.abi
 
 // Define constants for chain IDs
@@ -33,7 +34,7 @@ export const CHAIN_CONNECTIONS = {
         networkName: "Ethereum Sepolia",
         networkId: 11155111,
         networkIdHex: "0xaa36a7",
-        contractGlobal: "0x46730f7087F290C39b3ED1eB4cA81ce48664B9ac",
+        contractMixer: "0x46730f7087F290C39b3ED1eB4cA81ce48664B9ac",
         
         link: "https://sepolia.etherscan.io/tx/",
         linkAddress: "https://sepolia.etherscan.io/address/",
@@ -69,22 +70,15 @@ export const CHAIN_CONNECTIONS = {
                 ]
             },
         ],
-        supportedTokens: [],
-        dAppsInfo: [
-            {
-                address: "0x60Fd6f59080dC38643D8A0861cE2c52D828E3Ebe",
-
-                created: 3494952
-            }
-        ]
+        supportedTokens: []
     },
     [CHAIN_IDS.POLYGON]: {
         name: "Polygon",
         networkName: "Polygon Mumbai",
         networkId: 80001,
         networkIdHex: "0x13881",
-        contractGlobal: "0x98DAA62c02c047Bfa152B907f4DD16e2E9422A06",
-        
+        contractMixer: "0x98DAA62c02c047Bfa152B907f4DD16e2E9422A06",
+        abiMixer: ABI_MIXER_GENERAL,
         link: "https://mumbai.polygonscan.com/tx/",
         linkAddress: "https://mumbai.polygonscan.com/address/",
         universalUP:
@@ -136,7 +130,7 @@ export const CHAIN_CONNECTIONS = {
         networkName: "Binance Smart Test Chain",
         networkId: 97,
         networkIdHex: "0x61",
-        contractGlobal: "0x980c43C046F7B14A5eFE774f4958e7680dE365da",
+        contractMixer: "0x980c43C046F7B14A5eFE774f4958e7680dE365da",
         
         link: "https://testnet.bscscan.com/tx/",
         linkAddress: "https://testnet.bscscan.com//address/",
@@ -153,7 +147,7 @@ export const CHAIN_CONNECTIONS = {
         networkName: "Taiko Jolnir",
         networkId: 167007,
         networkIdHex: "0x28C5F",
-        contractGlobal: "0xD50eCE0eB75c448c5c158ce78a7a15beC45130Be",
+        contractMixer: "0xD50eCE0eB75c448c5c158ce78a7a15beC45130Be",
         
         link: "https://explorer.jolnir.taiko.xyz/tx/",
         linkAddress: "https://explorer.jolnir.taiko.xyz/address/",
@@ -170,7 +164,7 @@ export const CHAIN_CONNECTIONS = {
         networkName: "Manta Pacific",
         networkId: 3441005,
         networkIdHex: "0x34816D",
-        contractGlobal: "0xD50eCE0eB75c448c5c158ce78a7a15beC45130Be",
+        contractMixer: "0xD50eCE0eB75c448c5c158ce78a7a15beC45130Be",
         
         link: "https://pacific-explorer.manta.network/tx/",
         linkAddress: "https://pacific-explorer.manta.network/address/",
@@ -187,7 +181,7 @@ export const CHAIN_CONNECTIONS = {
         networkName: "Avalanche Fuji",
         networkId: 43113,
         networkIdHex: "0xA869",
-        contractGlobal: "0x2A26757847B7165c864A35405be419C2856eC0a6",
+        contractMixer: "0x2A26757847B7165c864A35405be419C2856eC0a6",
         
         link: "https://testnet.snowtrace.io/tx/",
         linkAddress: "https://testnet.snowtrace.io/address/",
@@ -204,7 +198,7 @@ export const CHAIN_CONNECTIONS = {
         networkName: "Arbitrum Goerli",
         networkId: 421613,
         networkIdHex: "0x66EED",
-        contractGlobal: "0xD50eCE0eB75c448c5c158ce78a7a15beC45130Be",
+        contractMixer: "0xD50eCE0eB75c448c5c158ce78a7a15beC45130Be",
         
         link: "https://goerli.arbiscan.io/tx/",
         linkAddress: "https://goerli.arbiscan.io/address/",
@@ -221,7 +215,7 @@ export const CHAIN_CONNECTIONS = {
         networkName: "Linea Goerli",
         networkId: 59140,
         networkIdHex: "0xE704",
-        contractGlobal: "0x50bCe66687fabB3ed18c8E7C2F9425B938D53aCD",
+        contractMixer: "0x50bCe66687fabB3ed18c8E7C2F9425B938D53aCD",
         
         link: "https://goerli.lineascan.build/tx/",
         linkAddress: "https://goerli.lineascan.build/address/",
@@ -238,7 +232,7 @@ export const CHAIN_CONNECTIONS = {
         networkName: "Metis Goerli",
         networkId: 599,
         networkIdHex: "0x257",
-        contractGlobal: "0xD50eCE0eB75c448c5c158ce78a7a15beC45130Be",
+        contractMixer: "0xD50eCE0eB75c448c5c158ce78a7a15beC45130Be",
         
         link: "https://goerli.explorer.metisdevops.link/tx/",
         linkAddress: "https://goerli.explorer.metisdevops.link/address/",
@@ -255,7 +249,7 @@ export const CHAIN_CONNECTIONS = {
         networkName: "Optimism Goerli",
         networkId: 420,
         networkIdHex: "0x1A4",
-        contractGlobal: "0xeFc1d04AB2A90581A961bA56e26BbB16ce4eF3cA",
+        contractMixer: "0xeFc1d04AB2A90581A961bA56e26BbB16ce4eF3cA",
         
         link: "https://goerli-optimism.etherscan.io/tx/",
         linkAddress: "https://goerli-optimism.etherscan.io/address/",
@@ -272,7 +266,7 @@ export const CHAIN_CONNECTIONS = {
         networkName: "PolygonZkEvm TestNet",
         networkId: 1442,
         networkIdHex: "0x5A2",
-        contractGlobal: "0x8eeF6461Ca83F66a398C9B996b6488a793a54ebd",
+        contractMixer: "0x8eeF6461Ca83F66a398C9B996b6488a793a54ebd",
         
         link: "https://testnet-zkevm.polygonscan.com/tx/",
         linkAddress: "https://testnet-zkevm.polygonscan.com/address/",
@@ -289,7 +283,7 @@ export const CHAIN_CONNECTIONS = {
         networkName: "ZkSyncEra TestNet",
         networkId: 280,
         networkIdHex: "0x118",
-        contractGlobal: "0x60e92Ce0D0B21635A668934b942427625daF53d4",
+        contractMixer: "0x60e92Ce0D0B21635A668934b942427625daF53d4",
         
         link: "https://goerli.explorer.zksync.io/tx/",
         linkAddress: "https://goerli.explorer.zksync.io/address/",
@@ -306,7 +300,7 @@ export const CHAIN_CONNECTIONS = {
         networkName: "Scroll Sepolia",
         networkId: 534351,
         networkIdHex: "0x8274F",
-        contractGlobal: "0xD50eCE0eB75c448c5c158ce78a7a15beC45130Be",
+        contractMixer: "0xD50eCE0eB75c448c5c158ce78a7a15beC45130Be",
         
         link: "https://sepolia-blockscout.scroll.io/tx/",
         linkAddress: "https://sepolia-blockscout.scroll.io/address/",
@@ -323,7 +317,7 @@ export const CHAIN_CONNECTIONS = {
         networkName: "Futurverse Porcini",
         networkId: 7672,
         networkIdHex: "0x1DF8",
-        contractGlobal: "0x2A26757847B7165c864A35405be419C2856eC0a6",
+        contractMixer: "0x2A26757847B7165c864A35405be419C2856eC0a6",
         
         link: "https://explorer.rootnet.cloud/tx/",
         linkAddress: "https://explorer.rootnet.cloud/address/",
@@ -340,7 +334,7 @@ export const CHAIN_CONNECTIONS = {
         networkName: "Mantle Testnet",
         networkId: 5001,
         networkIdHex: "0x1389",
-        contractGlobal: "0xD50eCE0eB75c448c5c158ce78a7a15beC45130Be",
+        contractMixer: "0xD50eCE0eB75c448c5c158ce78a7a15beC45130Be",
         
         link: "https://explorer.testnet.mantle.xyz/tx/",
         linkAddress: "https://explorer.testnet.mantle.xyz/address/",
@@ -357,7 +351,7 @@ export const CHAIN_CONNECTIONS = {
         networkName: "Base Goerli",
         networkId: 84531,
         networkIdHex: "0x14A33",
-        contractGlobal: "0x2A26757847B7165c864A35405be419C2856eC0a6",
+        contractMixer: "0x2A26757847B7165c864A35405be419C2856eC0a6",
         
         link: "https://goerli.basescan.org/tx/",
         linkAddress: "https://goerli.basescan.org/address/",
@@ -374,7 +368,7 @@ export const CHAIN_CONNECTIONS = {
         networkName: "Fantom Testnet",
         networkId: 4002,
         networkIdHex: "0xFA2",
-        contractGlobal: "0xD50eCE0eB75c448c5c158ce78a7a15beC45130Be",
+        contractMixer: "0xD50eCE0eB75c448c5c158ce78a7a15beC45130Be",
         
         link: "https://testnet.ftmscan.com/tx/",
         linkAddress: "https://testnet.ftmscan.com/address/",
@@ -391,7 +385,7 @@ export const CHAIN_CONNECTIONS = {
         networkName: "Celo Alfajores",
         networkId: 44787,
         networkIdHex: "0xAEF3",
-        contractGlobal: "0xD50eCE0eB75c448c5c158ce78a7a15beC45130Be",
+        contractMixer: "0xD50eCE0eB75c448c5c158ce78a7a15beC45130Be",
         
         link: "https://explorer.celo.org/alfajores/tx/",
         linkAddress: "https://explorer.celo.org/alfajores/address/",
@@ -408,7 +402,7 @@ export const CHAIN_CONNECTIONS = {
         networkName: "Oasis Sapphire Testnet",
         networkId: 23295,
         networkIdHex: "0x5AFF",
-        contractGlobal: "0xD50eCE0eB75c448c5c158ce78a7a15beC45130Be",
+        contractMixer: "0xD50eCE0eB75c448c5c158ce78a7a15beC45130Be",
         
         link: "https://testnet.explorer.sapphire.oasis.dev/tx/",
         linkAddress: "https://testnet.explorer.sapphire.oasis.dev/address/",
@@ -425,7 +419,7 @@ export const CHAIN_CONNECTIONS = {
         networkName: "Evmos Testnet",
         networkId: 9000,
         networkIdHex: "0x2328",
-        contractGlobal: "0xD50eCE0eB75c448c5c158ce78a7a15beC45130Be",
+        contractMixer: "0xD50eCE0eB75c448c5c158ce78a7a15beC45130Be",
         
         link: "https://testnet.escan.live/tx/",
         linkAddress: "https://testnet.escan.live/address/",
@@ -442,7 +436,7 @@ export const CHAIN_CONNECTIONS = {
         networkName: "Cronos Testnet",
         networkId: 338,
         networkIdHex: "0x152",
-        contractGlobal: "0x68bD463Ee8Ffa8C64349d701397427958D6065Af",
+        contractMixer: "0x68bD463Ee8Ffa8C64349d701397427958D6065Af",
         
         link: "https://explorer.cronos.org/testnet/tx/",
         linkAddress: "https://explorer.cronos.org/testnet/address/",
@@ -459,7 +453,7 @@ export const CHAIN_CONNECTIONS = {
         networkName: "Astar Shibuya",
         networkId: 81,
         networkIdHex: "0x51",
-        contractGlobal: "0xD50eCE0eB75c448c5c158ce78a7a15beC45130Be",
+        contractMixer: "0xD50eCE0eB75c448c5c158ce78a7a15beC45130Be",
         
         link: "https://blockscout.com/shibuya/tx/",
         linkAddress: "https://blockscout.com/shibuya/address/",

@@ -10,6 +10,7 @@ window.addEventListener('message', receiveMessage, false);
 // It is init with dummy data
 let userMessage = 
 {
+  "view": 1,
   "selectedFunc": 2,
   "targetBlockchain": "2",
   "sourceBlockchain": "2",
