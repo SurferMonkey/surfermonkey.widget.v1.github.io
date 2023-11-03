@@ -47,8 +47,8 @@ In-depth documentation is in active development. Stay tuned for comprehensive gu
 
 ## Feedback and Support
 Found an issue or have suggestions? Reach out to our [Twitter: @SurferMonkeyHQ](https://twitter.com/SurferMonkeyHQ). 
-Or via our [support team](https://www.surfermonkey.io/)
-Or open an issue on this repository.
+<br> Or via our [support team](https://www.surfermonkey.io/)
+<br> Or open an issue on this repository.
 
 ## Disclaimer
 
