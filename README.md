@@ -45,24 +45,8 @@ The current version uses a constant value for the Universal Plugin Global Hash, 
 
 In-depth documentation is in active development. Stay tuned for comprehensive guides, API references, and more.
 
-## Developer Maintenance
-
-For developers maintaining the widget:
-
-- Use the following Git commands to update the main branch:
-  ```
-  git add .
-  git commit -m "Your commit message"
-  git push origin main
-  ```
-
-- To update the GitHub Pages with the latest changes, run:
-  ```
-  npm run deploy -- -m "Your custom message"
-  ``
-
 ## Feedback and Support
-Found an issue or have suggestions? Reach out to our [support team](https://www.surfermonkey.io/) or open an issue on this repository.
+Found an issue or have suggestions? Reach out to our [Twitter: @SurferMonkeyHQ](https://twitter.com/SurferMonkeyHQ) [support team](https://www.surfermonkey.io/) or open an issue on this repository.
 
 ## Disclaimer
 
