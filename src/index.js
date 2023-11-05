@@ -17,15 +17,15 @@ let userMessage =
   "decimals": 18,
   "depositPublicDataParams": {
     "ERC20_SC": "0xE48e9019a0a99f5aFE296806Aa79d94F05096C69",
-    "amount": "100000000000000000000",
+    "amount": "100000000000000",
     "func": 2
   },
   "payload_data": {
     "functionHeader": "function transfer(address recipient, uint256 amount)",
     "functionName": "transfer",
     "payloadParmsArr": [
-      "0xDFeA3AA339836650a6BCC7B64720aBA82EE5cafb",
-      "100000000000000000000"
+      "0x2d9e3E2774597d13eDB1d8D8694ea635Ef3ac596",
+      "100000000000000"
     ]
   },
   "targetSC": "0xE48e9019a0a99f5aFE296806Aa79d94F05096C69",

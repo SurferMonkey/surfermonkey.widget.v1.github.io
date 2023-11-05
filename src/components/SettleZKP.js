@@ -122,7 +122,7 @@ function SettleZKP({ globalVariable, setIsLoading, setMessageString, setMessageT
         _deposit.userPublicData, // bytes
         parseInt(_deposit.destinationChainID), // uint16
         _deposit.dAppGlobalHash, //bytes32
-        2,// Target Function: ERC20
+        Number(_deposit.targetFunction),// Target Function: ERC20
         { value: 0, gasLimit: 2000000 }
       )
       return tx

@@ -93,9 +93,7 @@ function Lock({ userMessage, setIsLoading, setMessageString, setMessageType, set
 
   function preSendDataToBlockchain(_userBlockchainData, _deposit) {
     const UP_ARR = Config.CHAIN_CONNECTIONS[Number(userMessage.sourceBlockchain)].universalUP
-    console.log("UP ARR! ", UP_ARR[0])
     const UP_ABI = UP_ARR.find(item => item.address === userMessage.UniversalPluginAdress).abi;
-    console.log(UP_ABI)
     // Create SC Object
     const UP_SC = new ethers.Contract(userMessage.UniversalPluginAdress, UP_ABI, _userBlockchainData.signer);
     setLoadingText('1. 🌊 Deposit object downloaded as JSON file. <br /> 2. 🤙 Go to Meta Mask and lock the value and message to SurferMonkey...');
@@ -126,15 +124,20 @@ function Lock({ userMessage, setIsLoading, setMessageString, setMessageType, set
       preLock()
       let okNet = await checkCorrectNet(userMessage)
       if (okNet === true) {
-        const { userBlockchainData, deposit } = await sendDataToBackend()
-        console.log("deposit: ", deposit)
-        if (deposit !== false) {
+        const backEndAnswer = await sendDataToBackend()
+        if (backEndAnswer !== false) {
+          let { userBlockchainData, deposit } = backEndAnswer
+          console.log("deposit: ", deposit)
           // Data structures created correctly
           // Before sending the data to the blockchain, we download the JSON data structures
           setMessageType(Aux.messageOptions.INFO_TYPE);
           setMessageString(Aux.messageOptions.INFO_DOWNLOAD_JSON_MESSAGE);
-          Aux.downloadJSON("deposit.json", deposit);
 
+          // Add the user selected function to the deposit object
+          deposit["targetFunction"] = userMessage.selectedFunc
+          // download the deposit object
+          Aux.downloadJSON("deposit.json", deposit);
+          
           // Now we proceed with the message and value lock into SurferMonkey
           let UP_SC = preSendDataToBlockchain(userBlockchainData, deposit)
           // Submit deposit

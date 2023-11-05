@@ -3,12 +3,21 @@ import * as Config from '../config.js';
 import { ethers } from 'ethers'
 
 export function formatBigInt(bigIntNumber, scaleFactor, decimalPlaces) {
-    // Convert BigInt to string and move the decimal point
-    const decimalValue = parseFloat(bigIntNumber.toString().slice(0, -scaleFactor) + "." + bigIntNumber.toString().slice(-scaleFactor));
+    // Convert BigInt to string
+    let bigIntStr = bigIntNumber.toString();
 
-    // Format the result with the specified decimal points
+    // Ensure the string has enough digits by padding with leading zeros if necessary
+    bigIntStr = bigIntStr.padStart(scaleFactor + 1, '0');
+
+    // Insert a decimal point at the correct place
+    const decimalIndex = bigIntStr.length - scaleFactor;
+    const decimalValueStr = bigIntStr.slice(0, decimalIndex) + "." + bigIntStr.slice(decimalIndex);
+
+    // Convert to a number and format with the specified decimal places
+    const decimalValue = parseFloat(decimalValueStr);
     return decimalValue.toFixed(decimalPlaces);
 }
+
 
 export function stringToBigInt(value) {
     if (typeof value === 'string' && value.endsWith('n')) {

@@ -18,6 +18,7 @@ function Approve({ userMessage, setIsLoading, setMessageString, setMessageType, 
   const amountFormat = Aux.formatBigInt(amount, userMessage.decimals, userMessage.decimals)
   const amountFormatST = amountFormat + ""
 
+
   async function checkCorrectNet(_userMessage) {
     const currentChainInfo = await Aux.getCurrentChainProvider()
     if (currentChainInfo.networkId !== Config.CHAIN_CONNECTIONS[_userMessage.sourceBlockchain].networkId) {
