@@ -8,7 +8,7 @@ window.addEventListener('message', receiveMessage, false);
 
 // This is the object sent by the React App to this Widget
 // It is init with dummy data
-let userMessage = 
+let userMessage1 = 
 {
   "view": 1,
   "selectedFunc": 2,
@@ -33,6 +33,35 @@ let userMessage =
   "UniversalPluginAdress": "0x8896b9acBdfFf53e1fAb60e34eb0eC7245b69631",
   "EOA": "0xDFeA3AA339836650a6BCC7B64720aBA82EE5cafb"
 }
+
+// Native deposit
+let userMessage2 = 
+{
+  "view": 1,
+  "selectedFunc": 1,
+  "targetBlockchain": "2",
+  "sourceBlockchain": "2",
+  "decimals": 18,
+  "depositPublicDataParams": {
+    "amount": "1000000000000000",
+    "func": 1
+  },
+  "payload_data": {
+    "functionHeader": "function transferEth(address targetAddress, uint256 amount)",
+    "functionName": "transferEth",
+    "payloadParmsArr": [
+      "0x2d9e3E2774597d13eDB1d8D8694ea635Ef3ac596",
+      "1000000000000000"
+    ]
+  },
+  "targetSC": "0xA6D26C07dCE2AB9910F0588B010af1629D1b4fb3",
+  "UniversalPluginGlobalHash": "0xa8d9ac0e570be234ab694443c29562cb8c0e011f1338550cec163939ca52325d",
+  "UniversalPluginAdress": "0x8896b9acBdfFf53e1fAb60e34eb0eC7245b69631",
+  "EOA": "0xDFeA3AA339836650a6BCC7B64720aBA82EE5cafb"
+}
+
+// init user message
+let userMessage = {}
 
 function receiveMessage(event) {
   if (event.data.type !== 'SurferMonkeyIntent_a4REBKpy4d2kkdxivbaoPirjTnNj3Z') {
