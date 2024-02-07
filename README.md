@@ -6,6 +6,12 @@ Welcome to the SurferMonkey Widget Integration Guide!
 - This document equips you with detailed instructions to seamlessly incorporate the SurferMonkey Widget into your applications. 
 - Unlock the potential for users to execute anonymous and compliant transactions, engage with any smart contract, and navigate across any blockchain without the need for direct smart contract integration or modifications to your existing codebase.
 
+## Prerequisites and Technical Knowledge
+- Understanding of Blockchain Technology
+- Knowledge of Smart Contract Function Headers (EVM compatible for current deployments)
+- Familiarity with React Framework
+- Basic Understanding of Widget Integration and Interaction
+
 ## Quick Start
 Integrating the SurferMonkey Widget is straightforward. Follow these steps to get started:
 
