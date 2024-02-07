@@ -221,8 +221,42 @@ const SurferMonkeyWidget = ({ userMessage, onClose }) => {
 export default SurferMonkeyWidget;
 ```
 
-## Caution
-For immediate testing and demonstration purposes, we recommend utilizing the SurferMonkey Widget hosted on GitHub Pages. For deployment in a production environment, it is strongly advised to clone this repository and incorporate the SurferMonkey Widget as a React Component within your application. This approach helps mitigate potential security risks associated with URL-based integration, ensuring a more secure and reliable implementation.
+## Enhanced Security Practices for Widget Integration
+# Importance of Secure Integration
+Integrating the SurferMonkey Widget securely into your application is paramount to safeguard your users' interactions and data. While the convenience of embedding the widget via URL offers quick and easy integration, it is essential to understand the security implications and adopt more secure practices for production environments.
+
+# Potential Risks with URL-Based Integration
+Embedding the widget directly from a URL can introduce risks, particularly in a production environment:
+
+- **Man-in-the-Middle (MitM) Attacks**: If an attacker can intercept the communication between the user and the widget, they might modify the content or behavior of the widget, leading to potential data theft or malicious actions.
+
+- **Dependency on External Host**: Utilizing the widget hosted on GitHub Pages means relying on external hosting security practices. Any compromise in the hosting platform's security could impact your application.
+
+- **Content Integrity**: Without a direct control over the hosted widget, ensuring the integrity of the widget's code each time it loads in your application becomes challenging. This opens up a risk of the widget being tampered with without your knowledge.
+
+## Advantages of Cloning and Component Integration
+For these reasons, we strongly recommend cloning this repository and integrating the SurferMonkey Widget as a React Component within your application for production deployment. This approach offers several security advantages:
+
+- **Control Over the Widget's Code**: Cloning the repository gives you full control over the widget's code base, allowing you to review and understand the functionalities you're integrating into your application.
+
+- **Reduced Attack Surface**: Hosting the widget within your application infrastructure reduces the attack surface by eliminating external dependencies and points of failure.
+
+- **Update Management**: You can manage updates and modifications to the widget, ensuring that only verified and secure code updates are deployed in your application.
+
+- **Secure Communication**: Integrating as a component allows for secure, direct communication between your application and the widget, minimizing exposure to MitM attacks.
+
+## Implementing Secure Integration
+To securely integrate the SurferMonkey Widget as a React Component, follow these steps:
+
+1. **Clone the Repository**: Obtain the latest, verified version of the widget by cloning this repository directly from GitHub.
+
+2. **Review the Code**: Before integration, thoroughly review the widget's code to ensure it meets your security and functionality standards.
+
+3. **Integration as a Component**: Incorporate the widget into your application as a React Component. This ensures that the widget is served as part of your application, benefiting from your existing security measures.
+
+4. **Regular Updates**: Keep the widget updated by periodically checking this repository for security patches and updates. Apply these updates after reviewing the changes for security and compatibility.
+
+<br> By adopting these enhanced security practices, you ensure a safer environment for your users while leveraging the SurferMonkey Widget's powerful functionalities.
 
 ## Documentation
 
