@@ -177,8 +177,13 @@ The SurferMonkey Widget is hosted and maintained on GitHub pages. You can direct
 
 [https://surfermonkey.github.io/surfermonkey.widget.v1.github.io/](https://surfermonkey.github.io/surfermonkey.widget.v1.github.io/)
 
-# Widget integration example via URL in a React component
-It is important to integrate the SurferMonkey widget, with the `data` and `type` fields. Where `data` is the `userMessage`. and type is a constant value to filter the messages from all the Windows, Plug-Ins, etc. Currently `type` is set to `SurferMonkeyIntent_a4REBKpy4d2kkdxivbaoPirjTnNj3Z`.
+## Integrating the SurferMonkey Widget via URL in a React Component
+For seamless integration of the SurferMonkey widget within a React application, it's crucial to structure the message being sent to the widget correctly. This involves specifying the `data` and `type` fields in the message object:
+
+- `data`: This should contain the `userMessage` object, which outlines the transaction intent and necessary parameters for execution.
+- `type`: To ensure the widget processes only the relevant messages, this field should be set to a specific identifier. Currently, we use `SurferMonkeyIntent_a4REBKpy4d2kkdxivbaoPirjTnNj3Z` as the identifier to filter messages intended for the SurferMonkey widget among all incoming window messages, plugins, etc.
+By adhering to this structure, you can ensure that the SurferMonkey widget accurately receives and acts upon the intended commands, facilitating a smooth interaction within your React application.
+
 ```javascript
 // SurferMonkeyWidget.js
 import React from 'react';
@@ -215,6 +220,9 @@ const SurferMonkeyWidget = ({ userMessage, onClose }) => {
 
 export default SurferMonkeyWidget;
 ```
+
+## Caution
+For immediate testing and demonstration purposes, we recommend utilizing the SurferMonkey Widget hosted on GitHub Pages. For deployment in a production environment, it is strongly advised to clone this repository and incorporate the SurferMonkey Widget as a React Component within your application. This approach helps mitigate potential security risks associated with URL-based integration, ensuring a more secure and reliable implementation.
 
 ## Documentation
 
