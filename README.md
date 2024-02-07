@@ -68,7 +68,7 @@ let userMessage1 = {
 
 **Native Asset Transaction Example (userMessage2)**
 <br> This message describes a transaction involving native blockchain assets, with `selectedFunc` set to `1`. It outlines the intention to transfer native assets, specifying the amount and target address.
-<br> EXAMPLE: For an native value transfer (MATIC, ETH, etc). You can define ANY intention with Native value.
+<br> EXAMPLE: For a native value transfer (MATIC, ETH, etc). You can define ANY intention with Native value.
 ```javascript
 let userMessage2 = {
   "view": 1,
@@ -135,6 +135,36 @@ The current version uses a constant value for the Universal Plugin Global Hash, 
 - Universal Plugin Global Hash: `0xa8d9ac0e570be234ab694443c29562cb8c0e011f1338550cec163939ca52325d`
 <br> These values are essential for ensuring security and uniqueness across different blockchains. The Universal Plugin System facilitates cross-chain messaging and intent-based messages, providing a foundation for anonymous and compliant transactions.
 
+## SurferMonkey Blockchain IDs
+Currently all the following IDs are for `TESTNETS`ONLY. We support all these chains with out legacy system. With our new system of the Universal Plugin, only Polygon Mumbai, we will upgrade the other chains as we hit milestones.
+```javascript
+// Define constants for chain IDs
+export const CHAIN_IDS = {
+    ETHEREUM: 1,
+    POLYGON: 2,
+    BSC: 3,
+    TAIKO: 4,
+    MANTA: 5,
+    AVALANCHE: 6,
+    ARBITRUM: 7,
+    LINEA: 8,
+    METIS: 9,
+    OPTIMISM: 10,
+    POLYGONZKEVM: 11,
+    ZKSYNCERA: 12,
+    SCROLL: 13,
+    FUTURVERSE: 14,
+    MANTLE: 15,
+    BASE: 16,
+    FANTOM: 17,
+    CELO: 18,
+    OASIS_SAPPHIRE: 19,
+    EVMOS: 20,
+    CRONOS: 21,
+    ASTAR: 22
+};
+```
+
 ## Integration Levels
 
 1. **Widget URL**: Embed our widget directly using a URL.
@@ -146,6 +176,45 @@ The current version uses a constant value for the Universal Plugin Global Hash, 
 The SurferMonkey Widget is hosted and maintained on GitHub pages. You can directly integrate the widget into your dApp using the following URL:
 
 [https://surfermonkey.github.io/surfermonkey.widget.v1.github.io/](https://surfermonkey.github.io/surfermonkey.widget.v1.github.io/)
+
+# Widget integration example via URL in a React component
+It is important to integrate the SurferMonkey widget, with the `data` and `type` fields. Where `data` is the `userMessage`. and type is a constant value to filter the messages from all the Windows, Plug-Ins, etc. Currently `type` is set to `SurferMonkeyIntent_a4REBKpy4d2kkdxivbaoPirjTnNj3Z`.
+```javascript
+// SurferMonkeyWidget.js
+import React from 'react';
+import '../Styles/SurferMonkeyWidget.css';
+
+const SurferMonkeyWidget = ({ userMessage, onClose }) => {
+    const iframeRef = React.useRef(null);
+
+    const handleIframeLoad = () => {
+        console.log("User intent: ", userMessage)
+        const messageToSend = {
+            type: 'SurferMonkeyIntent_a4REBKpy4d2kkdxivbaoPirjTnNj3Z',
+            data: userMessage
+        };
+        if (iframeRef.current) {
+            iframeRef.current.contentWindow.postMessage(messageToSend, "https://surfermonkey.github.io/surfermonkey.widget.v1.github.io/");
+        }
+    };
+
+    return (
+        <div className="modal-container">
+            <button className='close-button-iframe' onClick={onClose}>X</button>
+            <iframe
+                ref={iframeRef}
+                onLoad={handleIframeLoad}
+                src="https://surfermonkey.github.io/surfermonkey.widget.v1.github.io/"
+                frameBorder="0"
+                title="SurferMonkey Widget"
+                allowFullScreen
+            ></iframe>
+        </div>
+    );
+}
+
+export default SurferMonkeyWidget;
+```
 
 ## Documentation
 
