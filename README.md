@@ -1,6 +1,6 @@
 ![SurferMonkey Logo](./src/Images/SurferMonkey.png)
 
-# SurferMonkey Widget (Intent based parivacy)
+# SurferMonkey Widget (Intent Based Privacy)
 ## Effortless Integration for Anonymity, Compliance, and Cross-chain Interactions on Any Blockchain
 <br> Welcome to the SurferMonkey Widget Integration Guide! This document equips you with detailed instructions to seamlessly incorporate the SurferMonkey Widget into your applications. 
 <br> Unlock the potential for users to execute anonymous and compliant transactions, engage with any smart contract, and navigate across any blockchain without the need for direct smart contract integration or modifications to your existing codebase.
