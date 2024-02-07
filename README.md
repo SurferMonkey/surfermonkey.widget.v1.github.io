@@ -222,10 +222,10 @@ export default SurferMonkeyWidget;
 ```
 
 ## Enhanced Security Practices for Widget Integration
-# Importance of Secure Integration
+### Importance of Secure Integration
 Integrating the SurferMonkey Widget securely into your application is paramount to safeguard your users' interactions and data. While the convenience of embedding the widget via URL offers quick and easy integration, it is essential to understand the security implications and adopt more secure practices for production environments.
 
-# Potential Risks with URL-Based Integration
+### Potential Risks with URL-Based Integration
 Embedding the widget directly from a URL can introduce risks, particularly in a production environment:
 
 - **Man-in-the-Middle (MitM) Attacks**: If an attacker can intercept the communication between the user and the widget, they might modify the content or behavior of the widget, leading to potential data theft or malicious actions.
@@ -263,9 +263,10 @@ To securely integrate the SurferMonkey Widget as a React Component, follow these
 In-depth documentation is in active development. Stay tuned for comprehensive guides, API references, and more.
 
 ## Feedback and Support
-Found an issue or have suggestions? Reach out to our [Twitter: @SurferMonkeyHQ](https://twitter.com/SurferMonkeyHQ)
-<br> Or via our [support team](https://www.surfermonkey.io/)
-<br> Or open an issue on this repository.
+Found an issue or have suggestions? 
+- Reach out to our [Twitter: @SurferMonkeyHQ](https://twitter.com/SurferMonkeyHQ)
+- Or via our [support team](https://www.surfermonkey.io/)
+- Or open an issue on this repository.
 
 ## Disclaimer
 
